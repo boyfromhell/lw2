@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class RegisterController extends Controller
+class InfoController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -17,12 +17,12 @@ class RegisterController extends Controller
     }
 
     /**
-     * Show the event registration page.
+     * Show the tournament information page.
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
     public function index()
     {
-        return view('register');
+        return view('info');
     }
 }

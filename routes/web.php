@@ -12,5 +12,7 @@
 */
 
 Route::get('/', 'HomeController@index')->name('home');
+Route::get('/register', 'RegisterController@index')->name('register');
+Route::get('/info', 'InfoController@index')->name('info');
 
 //Auth::routes();

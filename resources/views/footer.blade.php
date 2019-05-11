@@ -2,6 +2,11 @@
 <footer class="page-footer font-small mdb-color pt-4 fixed-bottom">
     <!-- Footer links -->
     <div class="container text-center text-md-left">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <b>All tournament proceeds benefit the Litchfield Tennis Association</b>
+            </div>
+        </div>
         <!-- Grid row -->
         <hr>
         <div class="row d-flex align-items-center">
