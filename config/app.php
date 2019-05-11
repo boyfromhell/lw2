@@ -14,6 +14,7 @@ return [
     */
 
     'name' => env('APP_NAME', 'Litchfield Watercade Tennis Tournament'),
+    'event_date' => 'July 12-14, 2019',
 
     /*
     |--------------------------------------------------------------------------
