@@ -1,5 +1,5 @@
 <!-- Footer -->
-<footer class="page-footer font-small mdb-color pt-4 fixed-bottom">
+<footer class="font-small pt-4">
     <!-- Footer links -->
     <div class="container text-center text-md-left">
         <!-- Grid row -->
