@@ -1,5 +1,5 @@
 <!-- Footer -->
-<footer class="font-small pt-4">
+<footer class="font-small">
     <!-- Footer links -->
     <div class="container text-center text-md-left">
         <div class="row">

@@ -91,6 +91,7 @@
                 @include('footer')
             </div>
         </div>
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
         <script src="{{ asset('js/app.js') }}" defer></script>
     </body>
 </html>
