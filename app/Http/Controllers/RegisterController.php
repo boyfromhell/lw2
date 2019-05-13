@@ -25,4 +25,9 @@ class RegisterController extends Controller
     {
         return view('register');
     }
+
+    public function create(Request $request)
+    {
+        dd($request);
+    }
 }

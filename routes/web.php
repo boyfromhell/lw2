@@ -12,7 +12,10 @@
 */
 
 Route::get('/', 'HomeController@index')->name('home');
+
 Route::get('/register', 'RegisterController@index')->name('register');
+Route::post('/register', 'RegisterController@create')->name('register-player');
+
 Route::get('/info', 'InfoController@index')->name('info');
 
 //Auth::routes();
