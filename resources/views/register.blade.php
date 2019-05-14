@@ -109,14 +109,14 @@
                         </div>
                         <div class="col-md-3">
                             <label for="event1_partner" class="col-form-label float-left">{{ __('Partner') }}</label>
-                            <input id="event1_partner" type="text" class="form-control @error('event1_partner') is-invalid @enderror" name="event1_partner" value="{{ old('event1_partner') }}" required autocomplete="event1_partner" autofocus>
+                            <input id="event1_partner" type="text" class="form-control @error('event1_partner') is-invalid @enderror" name="event1_partner" value="{{ old('event1_partner') }}" autocomplete="event1_partner" autofocus>
                             @error('event1_partner')
                                 <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
                             @enderror
                         </div>
                         <div class="col-md-3">
                             <label for="event2" class="col-form-label float-left">{{ __('Event Selection') }}</label>
-                            <select id="event2" class="form-control @error('event2') is-invalid @enderror" name="event2" value="{{ old('event2') }}" required autocomplete="event2" autofocus>
+                            <select id="event2" class="form-control @error('event2') is-invalid @enderror" name="event2" value="{{ old('event2') }}" autocomplete="event2" autofocus>
                                 <option>-- Please Select --</option>
                                 <option>Women's Open Singles</option>
                                 <option>Men's Open Singles</option>
@@ -132,7 +132,7 @@
                         </div>
                         <div class="col-md-3">
                             <label for="event2_partner" class="col-form-label float-left">{{ __('Partner') }}</label>
-                            <input id="event2_partner" type="text" class="form-control @error('event2_partner') is-invalid @enderror" name="event2_partner" value="{{ old('event2_partner') }}" required autocomplete="event2_partner" autofocus>
+                            <input id="event2_partner" type="text" class="form-control @error('event2_partner') is-invalid @enderror" name="event2_partner" value="{{ old('event2_partner') }}" autocomplete="event2_partner" autofocus>
                             @error('event2_partner')
                             <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
                             @enderror
