@@ -11,11 +11,9 @@
 |
 */
 
-Route::get('/', 'HomeController@index')->name('home');
-
-Route::get('/register', 'RegisterController@index')->name('register');
-Route::post('/register', 'RegisterController@create')->name('register-player');
-
-Route::get('/info', 'InfoController@index')->name('info');
+// Most all routing will be handled by Vue
+Route::get('/{any?}', function() {
+    return view('app');
+})->where('any', '.*');
 
 //Auth::routes();

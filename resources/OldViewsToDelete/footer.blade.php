@@ -1,29 +1,20 @@
-<!-- Footer -->
 <footer class="font-small">
-    <!-- Footer links -->
     <div class="container text-center text-md-left">
         <div class="row">
             <div class="col-md-12 text-center">
                 <b>All tournament proceeds benefit the Litchfield Tennis Association</b>
             </div>
         </div>
-        <!-- Grid row -->
         <hr>
         <div class="row d-flex align-items-center">
-            <!-- Grid column -->
             <div class="col-md-7 col-lg-8">
-                <!-- Copyright -->
                 <p class="text-center text-md-left">© 2019 Copyright:
                     <a href="https://watercadetennis.org">
                         <strong> Litchfield Watercade Tennis Tournament</strong>
                     </a>
                 </p>
-                <!-- End Copyright -->
             </div>
-            <!-- End Grid column -->
-            <!-- Grid column -->
             <div class="col-md-5 col-lg-4 ml-lg-0">
-                <!-- Social buttons -->
                 <div class="text-center text-md-right">
                     <ul class="list-unstyled list-inline">
                         <li class="list-inline-item">
@@ -43,12 +34,7 @@
                         </li>
                     </ul>
                 </div>
-                <!-- End Social buttons -->
             </div>
-            <!-- End Grid column -->
         </div>
-        <!-- End Grid row -->
     </div>
-    <!-- End Footer links -->
 </footer>
-<!-- End Footer -->

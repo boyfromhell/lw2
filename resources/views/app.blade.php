@@ -15,7 +15,7 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+        <link href="/css/app.css" rel="stylesheet">
 
         <!-- Styles -->
         <style>
@@ -24,8 +24,9 @@
                 color: #636b6f;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
-                height: 100vh;
+                height: 100%;
                 margin: 0;
+                position: relative;
             }
 
             .full-height {
@@ -80,18 +81,11 @@
         </style>
     </head>
     <body>
-        <div id="app">
-            <div>
-                @include('nav')
-            </div>
-            <main class="py-4">
-                @yield('content')
-            </main>
-            <div>
-                @include('footer')
-            </div>
+        <div id="app" class="full-height">
+            <router-view></router-view>
         </div>
+
         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-        <script src="{{ asset('js/app.js') }}" defer></script>
+        <script src="/js/app.js"></script>
     </body>
 </html>
