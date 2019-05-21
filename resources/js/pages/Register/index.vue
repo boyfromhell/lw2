@@ -6,7 +6,7 @@
                 2019 Watercade Tennis Tournament
             </div>
             <div class="subtitle">
-                Player Registration
+                Player Registration<hr />
             </div>
         </div>
         <registration-form v-on:submit="submitRegistration"></registration-form>
