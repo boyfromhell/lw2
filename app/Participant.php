@@ -9,11 +9,11 @@ class Participant extends Model
     /**
      * Participant T-Shirt Sizes
      */
-    const SHIRT_SMALL = 1;
-    const SHIRT_MEDIUM = 2;
-    const SHIRT_LARGE = 3;
-    const SHIRT_EXTRA_LARGE = 4;
-    const SHIRT_2XL = 5;
+    const SHIRT_SMALL = "SM";
+    const SHIRT_MEDIUM = "MD";
+    const SHIRT_LARGE = "LG";
+    const SHIRT_EXTRA_LARGE = "XL";
+    const SHIRT_2XL = "2X";
 
     public static $tShirtSizes = [
         self::SHIRT_SMALL => 'Small',
@@ -26,13 +26,13 @@ class Participant extends Model
     /**
      * Participant Events
      */
-    const WOMENS_SINGLES = 1;
-    const MENS_SINGLES = 2;
-    const MENS_A_SINGLES = 3;
-    const WOMENS_DOUBLES = 4;
-    const MENS_DOUBLES = 5;
-    const MENS_A_DOUBLES =6;
-    const MIXED_DOUBLES = 7;
+    const WOMENS_SINGLES = "WOS";
+    const MENS_SINGLES = "MOS";
+    const MENS_A_SINGLES = "MAS";
+    const WOMENS_DOUBLES = "WOD";
+    const MENS_DOUBLES = "MOD";
+    const MENS_A_DOUBLES = "MAD";
+    const MIXED_DOUBLES = "MXD";
 
     public static $events = [
         self::WOMENS_SINGLES => 'Women\'s Open Singles',

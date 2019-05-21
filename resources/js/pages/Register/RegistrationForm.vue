@@ -173,11 +173,23 @@
         },
         props: ['pending'],
         data: function () {
-
             return {
                 form: {
                     first_name: null,
                     last_name: null,
+                    email: null,
+                    address1: null,
+                    address2: null,
+                    city: null,
+                    state: null,
+                    zip: null,
+                    phone_number: null,
+                    shirt_size: null,
+                    event1: null,
+                    event1_partner: null,
+                    event2: null,
+                    event2_partner: null,
+                    signed_name: null,
                     recaptcha: null,
                 },
                 states: usStates,
@@ -188,9 +200,6 @@
         },
         methods: {
             submit() {
-                if(this.form.institution_type !== '3') {
-                    this.form.institution_type_other = null;
-                }
                 this.$validator.validateAll().then((valid) => {
                     if (valid) {
                         this.$refs.recaptcha.reset();
@@ -208,7 +217,7 @@
     };
 </script>
 
-<style>
+<style scoped>
     .required_field_tag {
         color: #ff0000;
     }

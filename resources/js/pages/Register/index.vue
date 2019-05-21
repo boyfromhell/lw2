@@ -18,16 +18,15 @@
     import RegistrationForm from "./RegistrationForm";
     import AppFooter from "../../components/AppFooter";
     import NavBar from "../../components/NavBar";
+    import RegistrationService from "../../services/registration.service";
 
     export default {
         name: 'Register',
-
         components: {
             NavBar,
             AppFooter,
             RegistrationForm,
         },
-
         data: () => {
             return {
                 pending: false
@@ -38,7 +37,7 @@
             submitRegistration(registrationData) {
                 this.pending = true;
 
-                AuthService.registerUser(registrationData)
+                RegistrationService.registerUser(registrationData)
                     .then(() => this.$router.push({name: 'register-acknowledge'}))
                     .catch(e => this.$store.dispatch(SHOW_NOTIFICATION, {type: 'error', message: getError(e)}))
                     .finally(() => this.pending = false);
