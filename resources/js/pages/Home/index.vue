@@ -11,6 +11,24 @@
             <div class="sponsored_by m-b-md">
                 {{ sponsoredBy }}
             </div>
+            <div class="row">
+                <div class="offset-md-2 col-md-8">
+                    <p>Welcome to the 41st Annual Litchfield Watercade Tennis Tournament!</p>
+                    <p>We hope you'll join us for this summer's event!</p>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+            <div class="row">
+                <div class="offset-md-2 col-md-8">
+                    <p>You can register online
+                        <router-link to="/register">
+                            here
+                        </router-link>
+                    </p>
+                    <p>Or you can download the registration form <a href="assets/docs/2019_Watercade_Registration.pdf" target="_blank">here</a></p>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
         </div>
         <app-footer></app-footer>
     </div>

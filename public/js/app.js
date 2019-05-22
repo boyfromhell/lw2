@@ -1932,6 +1932,24 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -32933,6 +32951,27 @@ var render = function() {
         _vm._v(" "),
         _c("div", { staticClass: "sponsored_by m-b-md" }, [
           _vm._v("\n            " + _vm._s(_vm.sponsoredBy) + "\n        ")
+        ]),
+        _vm._v(" "),
+        _vm._m(0),
+        _vm._v(" "),
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "offset-md-2 col-md-8" }, [
+            _c(
+              "p",
+              [
+                _vm._v("You can register online\n                    "),
+                _c("router-link", { attrs: { to: "/register" } }, [
+                  _vm._v("\n                        here\n                    ")
+                ])
+              ],
+              1
+            ),
+            _vm._v(" "),
+            _vm._m(1)
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-2" })
         ])
       ]),
       _vm._v(" "),
@@ -32941,7 +32980,44 @@ var render = function() {
     1
   )
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "offset-md-2 col-md-8" }, [
+        _c("p", [
+          _vm._v(
+            "Welcome to the 41st Annual Litchfield Watercade Tennis Tournament!"
+          )
+        ]),
+        _vm._v(" "),
+        _c("p", [_vm._v("We hope you'll join us for this summer's event!")])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-md-2" })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("p", [
+      _vm._v("Or you can download the registration form "),
+      _c(
+        "a",
+        {
+          attrs: {
+            href: "assets/docs/2019_Watercade_Registration.pdf",
+            target: "_blank"
+          }
+        },
+        [_vm._v("here")]
+      )
+    ])
+  }
+]
 render._withStripped = true
 
 
@@ -33219,7 +33295,7 @@ var staticRenderFns = [
           _vm._v(" "),
           _c("li", [
             _vm._v(
-              "On deuce points in mixed doubles, server will serve to the receiver of the same sex for the final point."
+              "On deuce points in mixed doubles, server will serve to the receiver of the same gender for the final point."
             )
           ]),
           _vm._v(" "),

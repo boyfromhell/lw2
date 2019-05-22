@@ -96,7 +96,7 @@
                 <ul>
                     <li>Matches will be 2 standard sets with no-ad game scoring</li>
                     <li>If the score becomes deuce, in singles and doubles, the receiver will decide which side of court they would like to receive the final point.</li>
-                    <li>On deuce points in mixed doubles, server will serve to the receiver of the same sex for the final point.</li>
+                    <li>On deuce points in mixed doubles, server will serve to the receiver of the same gender for the final point.</li>
                     <li>Set tie-break will be played at 6 games all.  Tie-break is first player/team to seven points - winning by two points.</li>
                     <li>If the players/teams split the first two sets, a match tie break will be played in lieu of a full third set.</li>
                     <li>A match tie-break is the first player/team to ten points - winning by two points.</li>
