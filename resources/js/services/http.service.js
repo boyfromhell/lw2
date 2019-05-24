@@ -7,18 +7,9 @@ export const HttpService = {
     getDefaultHeaders() {
         let headers = {
             'content-type': 'application/json',
-            'X-API-Key': process.env.VUE_APP_ADMIN_API_KEY
+            'X-Requested-With': 'XMLHttpRequest',
+            'X-CSRF-TOKEN': window.csrf_token
         };
-
-        const token = StorageService.getItem(StorageService.KEYS.ACCESS_TOKEN);
-
-        if (isDefined(token)) {
-            headers = {
-                ...headers, ...{
-                    'Authorization': `Bearer ${token}`
-                }
-            };
-        }
 
         return headers;
     },

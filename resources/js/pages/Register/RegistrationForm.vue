@@ -4,13 +4,13 @@
             <div class="col-md-3">
                 <label for="first_name" class="col-form-label float-left">First Name <span class="required_field_tag">*</span></label>
                 <input id="first_name" type="text" placeholder="First Name" name="first_name" class="form-control"
-                       v-model="form.first_name" v-validate="'required|max:50'">
+                       v-model="form.first_name" v-validate="{ required : true, max : 50, regex:/^[A-Za-z0-9 .-]+$/}">
                 <span v-if="errors.has('first_name')">{{ errors.first('first_name') }}</span>
             </div>
             <div class="col-md-3">
                 <label for="last_name" class="col-form-label float-left">Last Name <span class="required_field_tag">*</span></label>
                 <input id="last_name" type="text" placeholder="Last Name" name="last_name" class="form-control"
-                       v-model="form.last_name" v-validate="'required|max:50'">
+                       v-model="form.last_name" v-validate="{ required : true, max : 50, regex:/^[A-Za-z0-9 .-]+$/}">
                 <span v-if="errors.has('last_name')">{{ errors.first('last_name') }}</span>
             </div>
             <div class="col-md-6">
@@ -24,13 +24,13 @@
             <div class="col-md-8">
                 <label for="address1" class="col-form-label float-left">Street Address <span class="required_field_tag">*</span></label>
                 <input id="address1" type="text" placeholder="Address" name="address1" class="form-control"
-                       v-model="form.address1" v-validate="'required|max:100'">
+                       v-model="form.address1" v-validate="{ required : true, max : 100, regex:/^[A-Za-z0-9 #.]+$/}">
                 <span v-if="errors.has('address1')">{{ errors.first('address1') }}</span>
             </div>
             <div class="col-md-4">
                 <label for="address2" class="col-form-label float-left">Address 2</label>
                 <input id="address2" type="text" placeholder="Apt/Unit #" name="address2" class="form-control"
-                       v-validate="'max:50'" v-model="form.address2">
+                       v-validate="{ max : 50, regex:/^[A-Za-z0-9 #.]+$/}" v-model="form.address2">
                 <span v-if="errors.has('address2')">{{ errors.first('address2') }}</span>
             </div>
         </div>
@@ -38,7 +38,7 @@
             <div class="col-md-4">
                 <label for="city" class="col-form-label float-left">City <span class="required_field_tag">*</span></label>
                 <input id="city" type="text" placeholder="City" name="city" class="form-control"
-                       v-model="form.city" v-validate="'required|max:100'">
+                       v-model="form.city" v-validate="{ required : true, max : 50, regex:/^[A-Za-z0-9 #.]+$/}">
                 <span v-if="errors.has('city')">{{ errors.first('city') }}</span>
             </div>
             <div class="col-md-2">
@@ -46,7 +46,7 @@
                 <div class="inline-block relative w-full">
                     <select id="state" type="text" name="state" v-model="form.state" class="form-control"
                             v-validate="'required|length:2'">
-                        <option disabled>Please Select</option>
+                        <option :value="null">Please Select</option>
                         <option v-for="(state, key, index) of states" :value="key" :key="index">{{ state }}</option>
                     </select>
                 </div>
@@ -55,7 +55,7 @@
             <div class="col-md-3">
                 <label for="zip" class="col-form-label float-left">Zip Code <span class="required_field_tag">*</span></label>
                 <input id="zip" type="text" placeholder="Zip/Postal Code" name="zip" class="form-control"
-                       v-model="form.zip" v-validate="'required'" data-vv-as="zip/postal code">
+                       v-model="form.zip" v-validate="{ required : true, max : 10, regex:/^[A-Za-z0-9 #.-]+$/}" data-vv-as="zip/postal code">
                 <span v-if="errors.has('zip')">{{ errors.first('zip') }}</span>
             </div>
         </div>
@@ -63,7 +63,7 @@
             <div class="col-md-4">
                 <label for="phone_number" class="col-form-label float-left">Phone Number <span class="required_field_tag">*</span></label>
                 <input id="phone_number" type="text" placeholder="Phone Number" name="phone_number" class="form-control"
-                       v-model="form.phone_number" v-validate="'required'" data-vv-as="phone number">
+                       v-model="form.phone_number" v-validate="{ required : true, max : 15, regex:/^[A-Za-z0-9 #.-]+$/}" data-vv-as="phone number">
                 <span v-if="errors.has('phone_number')">{{ errors.first('phone_number') }}</span>
             </div>
             <div class="col-md-4 offset-md-2">
@@ -71,7 +71,7 @@
                 <div class="inline-block relative w-full">
                     <select id="shirt_size" type="text" name="shirt_size" class="form-control"
                             v-model="form.shirt_size" v-validate="'required|length:2'">
-                        <option disabled></option>
+                        <option :value="null">Please Select</option>
                         <option v-for="(shirtSize, key, index) of shirtSizes" :value="key" :key="index">{{ shirtSize }}</option>
                     </select>
                 </div>
@@ -84,7 +84,7 @@
                 <div class="inline-block relative w-full">
                     <select id="event1" type="text" name="event1" class="form-control"
                             v-model="form.event1" v-validate="'required|length:3'" data-vv-as="primary event">
-                        <option disabled></option>
+                        <option :value="null">Please Select</option>
                         <option v-for="(event1, key, index) of primary_events" :value="key" :key="index">{{ event1 }}</option>
                     </select>
                 </div>
@@ -93,15 +93,15 @@
             <div class="col-md-3">
                 <label for="event1_partner" class="col-form-label float-left">Doubles Partner</label>
                 <input id="event1_partner" type="text" placeholder="Doubles Partner Name (if known)" name="event1_partner" class="form-control"
-                       v-model="form.event1_partner" v-validate="'required'" data-vv-as="doubles partner">
+                       v-model="form.event1_partner" v-validate="{ max : 50, regex:/^[A-Za-z0-9 ]+$/}" data-vv-as="doubles partner">
                 <span v-if="errors.has('event1_partner')">{{ errors.first('event1_partner') }}</span>
             </div>
             <div class="col-md-3">
                 <label for="event2" class="col-form-label float-left">Event 2</label>
                 <div class="inline-block relative w-full">
                     <select id="event2" type="text" name="event2" class="form-control"
-                            v-model="form.event2" v-validate="'required|length:3'" data-vv-as="second event">>
-                        <option disabled></option>
+                            v-model="form.event2" v-validate="{ is_not : form.event1, max : 3 }" data-vv-as="second event">>
+                        <option :value="null">Only Select If Playing 2 Events</option>
                         <option v-for="(event2, key, index) of secondary_events" :value="key" :key="index">{{ event2 }}</option>
                     </select>
                 </div>
@@ -110,7 +110,7 @@
             <div class="col-md-3">
                 <label for="event2_partner" class="col-form-label float-left">Doubles Partner</label>
                 <input id="event2_partner" type="text" placeholder="Doubles Partner Name (if known)" name="event2_partner" class="form-control"
-                       v-model="form.event2_partner" v-validate="'required'" data-vv-as="doubles partner">
+                       v-model="form.event2_partner" v-validate="{ max : 50, regex:/^[A-Za-z0-9 ]+$/}" data-vv-as="doubles partner">
                 <span v-if="errors.has('event2_partner')">{{ errors.first('event2_partner') }}</span>
             </div>
         </div>
@@ -129,7 +129,7 @@
             <div class="col-md-4">
                 <label for="signed_name" class="col-form-label float-left">Signed Name <span class="required_field_tag">*</span></label>
                 <input id="signed_name" type="text" placeholder="Authorized Signee" name="signed_name" class="form-control"
-                       v-model="form.signed_name" v-validate="'required'" data-vv-as="authorized signed">
+                       v-model="form.signed_name" v-validate="{ required : true, max : 50, regex:/^[A-Za-z0-9 .-]+$/}" data-vv-as="authorized signed">
                 <span v-if="errors.has('signed_name')">{{ errors.first('signed_name') }}</span>
             </div>
             <div class="col-md-8">

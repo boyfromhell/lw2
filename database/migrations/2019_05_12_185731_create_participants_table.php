@@ -30,6 +30,8 @@ class CreateParticipantsTable extends Migration
             $table->tinyInteger('event2')->nullable();
             $table->string('event2_partner')->nullable();
             $table->string('signed_name');
+            $table->integer('tournament_fees');
+            $table->boolean('fees_paid');
             $table->timestamps();
         });
     }

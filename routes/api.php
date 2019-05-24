@@ -17,3 +17,8 @@ use Illuminate\Http\Request;
 //    return $request->user();
 //});
 
+Route::group(['middleware' => 'api'], function ($router) {
+
+    Route::post('register', 'RegisterController@create');
+
+});

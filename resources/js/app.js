@@ -15,6 +15,7 @@ import { dictionary } from './utils/dictionary';
  */
 Vue.use(VueRouter);
 Vue.use(VeeValidate, {
+    aria: true,
     classes: true,
     dictionary: dictionary,
     events: 'input|blur'

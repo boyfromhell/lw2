@@ -2405,11 +2405,9 @@ __webpack_require__.r(__webpack_exports__);
         return _this.$router.push({
           name: 'register-acknowledge'
         });
-      })["catch"](function (e) {
-        return _this.$store.dispatch(SHOW_NOTIFICATION, {
-          type: 'error',
-          message: getError(e)
-        });
+      }) //.catch(e => this.$store.dispatch(SHOW_NOTIFICATION, {type: 'error', message: getError(e)}))
+      ["catch"](function (e) {
+        return console.log("Error: ", e);
       })["finally"](function () {
         return _this.pending = false;
       });
@@ -6962,7 +6960,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/*.content {*/\n/*    min-height: calc(100vh - 300px);*/\n/*}*/\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/*.content {*/\n/*    min-height: calc(100vh - 300px);*/\n/*}*/\n", ""]);
 
 // exports
 
@@ -33436,8 +33434,9 @@ var render = function() {
               {
                 name: "validate",
                 rawName: "v-validate",
-                value: "required|max:50",
-                expression: "'required|max:50'"
+                value: { required: true, max: 50, regex: /^[A-Za-z0-9 .-]+$/ },
+                expression:
+                  "{ required : true, max : 50, regex:/^[A-Za-z0-9 .-]+$/}"
               }
             ],
             staticClass: "form-control",
@@ -33477,8 +33476,9 @@ var render = function() {
               {
                 name: "validate",
                 rawName: "v-validate",
-                value: "required|max:50",
-                expression: "'required|max:50'"
+                value: { required: true, max: 50, regex: /^[A-Za-z0-9 .-]+$/ },
+                expression:
+                  "{ required : true, max : 50, regex:/^[A-Za-z0-9 .-]+$/}"
               }
             ],
             staticClass: "form-control",
@@ -33561,8 +33561,9 @@ var render = function() {
               {
                 name: "validate",
                 rawName: "v-validate",
-                value: "required|max:100",
-                expression: "'required|max:100'"
+                value: { required: true, max: 100, regex: /^[A-Za-z0-9 #.]+$/ },
+                expression:
+                  "{ required : true, max : 100, regex:/^[A-Za-z0-9 #.]+$/}"
               }
             ],
             staticClass: "form-control",
@@ -33603,8 +33604,8 @@ var render = function() {
               {
                 name: "validate",
                 rawName: "v-validate",
-                value: "max:50",
-                expression: "'max:50'"
+                value: { max: 50, regex: /^[A-Za-z0-9 #.]+$/ },
+                expression: "{ max : 50, regex:/^[A-Za-z0-9 #.]+$/}"
               },
               {
                 name: "model",
@@ -33652,8 +33653,9 @@ var render = function() {
               {
                 name: "validate",
                 rawName: "v-validate",
-                value: "required|max:100",
-                expression: "'required|max:100'"
+                value: { required: true, max: 50, regex: /^[A-Za-z0-9 #.]+$/ },
+                expression:
+                  "{ required : true, max : 50, regex:/^[A-Za-z0-9 #.]+$/}"
               }
             ],
             staticClass: "form-control",
@@ -33721,7 +33723,7 @@ var render = function() {
                 }
               },
               [
-                _c("option", { attrs: { disabled: "" } }, [
+                _c("option", { domProps: { value: null } }, [
                   _vm._v("Please Select")
                 ]),
                 _vm._v(" "),
@@ -33756,8 +33758,9 @@ var render = function() {
               {
                 name: "validate",
                 rawName: "v-validate",
-                value: "required",
-                expression: "'required'"
+                value: { required: true, max: 10, regex: /^[A-Za-z0-9 #.-]+$/ },
+                expression:
+                  "{ required : true, max : 10, regex:/^[A-Za-z0-9 #.-]+$/}"
               }
             ],
             staticClass: "form-control",
@@ -33800,8 +33803,9 @@ var render = function() {
               {
                 name: "validate",
                 rawName: "v-validate",
-                value: "required",
-                expression: "'required'"
+                value: { required: true, max: 15, regex: /^[A-Za-z0-9 #.-]+$/ },
+                expression:
+                  "{ required : true, max : 15, regex:/^[A-Za-z0-9 #.-]+$/}"
               }
             ],
             staticClass: "form-control",
@@ -33870,7 +33874,9 @@ var render = function() {
                 }
               },
               [
-                _c("option", { attrs: { disabled: "" } }),
+                _c("option", { domProps: { value: null } }, [
+                  _vm._v("Please Select")
+                ]),
                 _vm._v(" "),
                 _vm._l(_vm.shirtSizes, function(shirtSize, key, index) {
                   return _c(
@@ -33938,7 +33944,9 @@ var render = function() {
                 }
               },
               [
-                _c("option", { attrs: { disabled: "" } }),
+                _c("option", { domProps: { value: null } }, [
+                  _vm._v("Please Select")
+                ]),
                 _vm._v(" "),
                 _vm._l(_vm.primary_events, function(event1, key, index) {
                   return _c(
@@ -33978,8 +33986,8 @@ var render = function() {
               {
                 name: "validate",
                 rawName: "v-validate",
-                value: "required",
-                expression: "'required'"
+                value: { max: 50, regex: /^[A-Za-z0-9 ]+$/ },
+                expression: "{ max : 50, regex:/^[A-Za-z0-9 ]+$/}"
               }
             ],
             staticClass: "form-control",
@@ -34030,8 +34038,8 @@ var render = function() {
                   {
                     name: "validate",
                     rawName: "v-validate",
-                    value: "required|length:3",
-                    expression: "'required|length:3'"
+                    value: { is_not: _vm.form.event1, max: 3 },
+                    expression: "{ is_not : form.event1, max : 3 }"
                   }
                 ],
                 staticClass: "form-control",
@@ -34061,7 +34069,9 @@ var render = function() {
               },
               [
                 _vm._v(">\n                    "),
-                _c("option", { attrs: { disabled: "" } }),
+                _c("option", { domProps: { value: null } }, [
+                  _vm._v("Only Select If Playing 2 Events")
+                ]),
                 _vm._v(" "),
                 _vm._l(_vm.secondary_events, function(event2, key, index) {
                   return _c(
@@ -34101,8 +34111,8 @@ var render = function() {
               {
                 name: "validate",
                 rawName: "v-validate",
-                value: "required",
-                expression: "'required'"
+                value: { max: 50, regex: /^[A-Za-z0-9 ]+$/ },
+                expression: "{ max : 50, regex:/^[A-Za-z0-9 ]+$/}"
               }
             ],
             staticClass: "form-control",
@@ -34147,8 +34157,9 @@ var render = function() {
               {
                 name: "validate",
                 rawName: "v-validate",
-                value: "required",
-                expression: "'required'"
+                value: { required: true, max: 50, regex: /^[A-Za-z0-9 .-]+$/ },
+                expression:
+                  "{ required : true, max : 50, regex:/^[A-Za-z0-9 .-]+$/}"
               }
             ],
             staticClass: "form-control",
@@ -49554,6 +49565,7 @@ __webpack_require__.r(__webpack_exports__);
 
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]);
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vee_validate__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  aria: true,
   classes: true,
   dictionary: _utils_dictionary__WEBPACK_IMPORTED_MODULE_5__["dictionary"],
   events: 'input|blur'
@@ -50254,10 +50266,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _routes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../routes */ "./resources/js/routes.js");
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 
 
 var http = axios__WEBPACK_IMPORTED_MODULE_0___default.a.create();
@@ -50265,16 +50273,9 @@ var HttpService = {
   getDefaultHeaders: function getDefaultHeaders() {
     var headers = {
       'content-type': 'application/json',
-      'X-API-Key': Object({"MIX_PUSHER_APP_KEY":"","MIX_PUSHER_APP_CLUSTER":"mt1","NODE_ENV":"development"}).VUE_APP_ADMIN_API_KEY
+      'X-Requested-With': 'XMLHttpRequest',
+      'X-CSRF-TOKEN': window.csrf_token
     };
-    var token = StorageService.getItem(StorageService.KEYS.ACCESS_TOKEN);
-
-    if (isDefined(token)) {
-      headers = _objectSpread({}, headers, {
-        'Authorization': "Bearer ".concat(token)
-      });
-    }
-
     return headers;
   },
   httpPost: function httpPost(url, data) {

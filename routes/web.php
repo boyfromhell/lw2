@@ -11,9 +11,13 @@
 |
 */
 
+Route::get('/nova', function() {
+    return redirect('nova');
+});
+
 // Most all routing will be handled by Vue
-Route::get('/{any?}', function() {
+Route::get('/{any}', function(){
     return view('app');
-})->where('any', '.*');
+})->where('any', '^(?!nova-api).*$');
 
 //Auth::routes();

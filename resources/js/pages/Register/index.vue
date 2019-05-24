@@ -39,7 +39,8 @@
 
                 RegistrationService.registerUser(registrationData)
                     .then(() => this.$router.push({name: 'register-acknowledge'}))
-                    .catch(e => this.$store.dispatch(SHOW_NOTIFICATION, {type: 'error', message: getError(e)}))
+                    //.catch(e => this.$store.dispatch(SHOW_NOTIFICATION, {type: 'error', message: getError(e)}))
+                    .catch(e => console.log("Error: ", e))
                     .finally(() => this.pending = false);
             }
         },
