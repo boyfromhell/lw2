@@ -15,6 +15,11 @@ Route::get('/nova', function() {
     return redirect('nova');
 });
 
+Route::get('/mailable', function () {
+    $participant = App\Participant::find(4);
+    return new App\Mail\RegistrationConfirmation($participant);
+});
+
 // Most all routing will be handled by Vue
 Route::get('/{any}', function(){
     return view('app');

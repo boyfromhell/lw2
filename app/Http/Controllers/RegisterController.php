@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Mail\RegistrationConfirmationExternal;
-use App\Mail\RegistrationConfirmationInternal;
 use App\Participant;
 use App\Http\Requests\RegistrationRequest;
+use App\Mail\RegistrationConfirmation;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\Request;
 
@@ -23,10 +22,9 @@ class RegisterController extends Controller
 
     public function create(RegistrationRequest $request)
     {
-//        dd($request->all());
         $participant = $this->createParticipant($request->all());
-//        $ccMailRecipients = explode(',', env('MAIL_CC'));
-//        Mail::to($participant['email'])->cc($ccMailRecipients)->queue(new RegistrationConfirmationInternal($user));
+        $ccMailRecipients = explode(',', env('MAIL_CC'));
+        Mail::to($participant['email'])->cc($ccMailRecipients)->queue(new RegistrationConfirmation($participant));
 
         return response()->success();
     }
