@@ -15,6 +15,7 @@ class CreateParticipantsTable extends Migration
     {
         Schema::create('participants', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->integer('event_year');
             $table->string('first_name');
             $table->string('last_name');
             $table->string('email');
@@ -27,7 +28,7 @@ class CreateParticipantsTable extends Migration
             $table->string('shirt_size');
             $table->string('event1');
             $table->string('event1_partner')->nullable();
-            $table->tinyInteger('event2')->nullable();
+            $table->string('event2')->nullable();
             $table->string('event2_partner')->nullable();
             $table->string('signed_name');
             $table->integer('tournament_fees');
