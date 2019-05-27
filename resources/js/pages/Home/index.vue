@@ -1,7 +1,7 @@
 <template>
-    <div class="container">
+    <div class="container primary-container">
         <nav-bar></nav-bar>
-        <div class="content">
+        <div class="container content ">
             <div class="title">
                 {{ title }}
             </div>
@@ -13,21 +13,25 @@
             </div>
             <div class="row">
                 <div class="offset-md-2 col-md-8">
-                    <p>Welcome to the 41st Annual Litchfield Watercade Tennis Tournament!</p>
-                    <p>We hope you'll join us for this summer's event!</p>
+                    <p class="normal-text">Welcome to the 41st Annual Litchfield Watercade Tennis Tournament!</p>
+                    <p class="normal-text">We hope you'll join us for this summer's event!</p>
                 </div>
                 <div class="col-md-2"></div>
             </div>
             <div class="row">
                 <div class="offset-md-2 col-md-8">
-                    <p>You can register online
-                        <router-link to="/register">
-                            here
-                        </router-link>
-                    </p>
-                    <p>Or you can download the registration form <a href="assets/docs/2019_Watercade_Registration.pdf" target="_blank">here</a></p>
+                    <p class="normal-text">We are now offering online registration - but unfortunately no online payment at this time.</p>
+                    <p class="normal-text">Or you can download the full registration form to fill out.</p>
+                    <p class="normal-text">Registration is due July 7th.  Register today!</p>
                 </div>
                 <div class="col-md-2"></div>
+            </div>
+            <div class="row">
+                <div class="offset-md-3 col-md-6">
+                    <router-link to="/register" tag="button" class="btn btn-primary mr-md-2" >Register Online</router-link>
+                    <a href="assets/docs/2019_Watercade_Registration.pdf" target="_blank"><button class="btn btn-primary ml-md-2">Get PDF Registration Form</button></a>
+                </div>
+                <div class="col-md-3"></div>
             </div>
         </div>
         <app-footer></app-footer>

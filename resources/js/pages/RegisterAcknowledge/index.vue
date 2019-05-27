@@ -1,7 +1,7 @@
 <template>
-    <div class="container">
+    <div class="container primary-container">
         <nav-bar></nav-bar>
-        <div class="content">
+        <div class="content container">
             <div class="title">
                 {{ title }}
             </div>

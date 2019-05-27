@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div class="container primary-container">
         <nav-bar :pending="pending"></nav-bar>
         <div class="content">
             <div class="title">

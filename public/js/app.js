@@ -1950,6 +1950,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -2104,6 +2108,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -2130,6 +2136,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _utils_primary_events__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../utils/primary_events */ "./resources/js/utils/primary_events.js");
 /* harmony import */ var _utils_secondary_events__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../utils/secondary_events */ "./resources/js/utils/secondary_events.js");
 /* harmony import */ var vue_recaptcha__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vue-recaptcha */ "./node_modules/vue-recaptcha/dist/vue-recaptcha.es.js");
+//
+//
 //
 //
 //
@@ -32934,11 +32942,11 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "container" },
+    { staticClass: "container primary-container" },
     [
       _c("nav-bar"),
       _vm._v(" "),
-      _c("div", { staticClass: "content" }, [
+      _c("div", { staticClass: "container content " }, [
         _c("div", { staticClass: "title" }, [
           _vm._v("\n            " + _vm._s(_vm.title) + "\n        ")
         ]),
@@ -32953,23 +32961,28 @@ var render = function() {
         _vm._v(" "),
         _vm._m(0),
         _vm._v(" "),
+        _vm._m(1),
+        _vm._v(" "),
         _c("div", { staticClass: "row" }, [
-          _c("div", { staticClass: "offset-md-2 col-md-8" }, [
-            _c(
-              "p",
-              [
-                _vm._v("You can register online\n                    "),
-                _c("router-link", { attrs: { to: "/register" } }, [
-                  _vm._v("\n                        here\n                    ")
-                ])
-              ],
-              1
-            ),
-            _vm._v(" "),
-            _vm._m(1)
-          ]),
+          _c(
+            "div",
+            { staticClass: "offset-md-3 col-md-6" },
+            [
+              _c(
+                "router-link",
+                {
+                  staticClass: "btn btn-primary mr-md-2",
+                  attrs: { to: "/register", tag: "button" }
+                },
+                [_vm._v("Register Online")]
+              ),
+              _vm._v(" "),
+              _vm._m(2)
+            ],
+            1
+          ),
           _vm._v(" "),
-          _c("div", { staticClass: "col-md-2" })
+          _c("div", { staticClass: "col-md-3" })
         ])
       ]),
       _vm._v(" "),
@@ -32985,13 +32998,15 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "row" }, [
       _c("div", { staticClass: "offset-md-2 col-md-8" }, [
-        _c("p", [
+        _c("p", { staticClass: "normal-text" }, [
           _vm._v(
             "Welcome to the 41st Annual Litchfield Watercade Tennis Tournament!"
           )
         ]),
         _vm._v(" "),
-        _c("p", [_vm._v("We hope you'll join us for this summer's event!")])
+        _c("p", { staticClass: "normal-text" }, [
+          _vm._v("We hope you'll join us for this summer's event!")
+        ])
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "col-md-2" })
@@ -33001,19 +33016,44 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("p", [
-      _vm._v("Or you can download the registration form "),
-      _c(
-        "a",
-        {
-          attrs: {
-            href: "assets/docs/2019_Watercade_Registration.pdf",
-            target: "_blank"
-          }
-        },
-        [_vm._v("here")]
-      )
+    return _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "offset-md-2 col-md-8" }, [
+        _c("p", { staticClass: "normal-text" }, [
+          _vm._v(
+            "We are now offering online registration - but unfortunately no online payment at this time."
+          )
+        ]),
+        _vm._v(" "),
+        _c("p", { staticClass: "normal-text" }, [
+          _vm._v("Or you can download the full registration form to fill out.")
+        ]),
+        _vm._v(" "),
+        _c("p", { staticClass: "normal-text" }, [
+          _vm._v("Registration is due July 7th.  Register today!")
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-md-2" })
     ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "a",
+      {
+        attrs: {
+          href: "assets/docs/2019_Watercade_Registration.pdf",
+          target: "_blank"
+        }
+      },
+      [
+        _c("button", { staticClass: "btn btn-primary ml-md-2" }, [
+          _vm._v("Get PDF Registration Form")
+        ])
+      ]
+    )
   }
 ]
 render._withStripped = true
@@ -33039,34 +33079,8 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "container" },
-    [
-      _c("nav-bar"),
-      _vm._v(" "),
-      _c("div", { staticClass: "title text-center" }, [
-        _vm._v("\n        Tournament Information\n    ")
-      ]),
-      _vm._v(" "),
-      _vm._m(0),
-      _vm._v(" "),
-      _vm._m(1),
-      _vm._v(" "),
-      _vm._m(2),
-      _vm._v(" "),
-      _vm._m(3),
-      _vm._v(" "),
-      _vm._m(4),
-      _vm._v(" "),
-      _vm._m(5),
-      _vm._v(" "),
-      _vm._m(6),
-      _vm._v(" "),
-      _vm._m(7),
-      _vm._v(" "),
-      _vm._m(8),
-      _vm._v(" "),
-      _c("app-footer")
-    ],
+    { staticClass: "container primary-container" },
+    [_c("nav-bar"), _vm._v(" "), _vm._m(0), _vm._v(" "), _c("app-footer")],
     1
   )
 }
@@ -33075,310 +33089,286 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col-md-12" }, [
-        _c("h4", [_c("u", [_vm._v("Registration Deadline")])])
+    return _c("div", { staticClass: "container" }, [
+      _c("div", { staticClass: "title text-center" }, [
+        _vm._v("\n            Tournament Information\n        ")
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "col-md-12 ml-3" }, [
-        _c("p", [_vm._v("Sunday, July 7, 2019 at 11:59 PM")])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col-md-12" }, [
-        _c("h4", [_c("u", [_vm._v("Location")])])
+      _c("div", { staticClass: "row" }, [
+        _c("div", { staticClass: "col-md-12" }, [
+          _c("h4", [_c("u", [_vm._v("Registration Deadline")])])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-md-12 ml-3" }, [
+          _c("p", [_vm._v("Sunday, July 7, 2019 at 11:59 PM")])
+        ])
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "col-md-12 ml-3" }, [
-        _c("p", [
-          _vm._v("High School Tennis Complex (south of high school) "),
-          _c("br"),
-          _vm._v(" "),
-          _c("b", [
+      _c("div", { staticClass: "row" }, [
+        _c("div", { staticClass: "col-md-12" }, [
+          _c("h4", [_c("u", [_vm._v("Location")])])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-md-12 ml-3" }, [
+          _c("p", [
+            _vm._v("High School Tennis Complex (south of high school) "),
+            _c("br"),
+            _vm._v(" "),
+            _c("b", [
+              _vm._v(
+                "All players must check in and be ready to play 15 minutes before their scheduled match!"
+              )
+            ])
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "row" }, [
+        _c("div", { staticClass: "col-md-12" }, [
+          _c("h4", [_c("u", [_vm._v("Events Offered")])])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-md-12 ml-3" }, [
+          _c("ul", [
+            _c("li", [_vm._v("Men's Open Singles and Doubles")]),
+            _vm._v(" "),
+            _c("li", [_vm._v("Women's Open Singles and Doubles")]),
+            _vm._v(" "),
+            _c("li", [_vm._v("Mixed Open Doubles")]),
+            _vm._v(" "),
+            _c("li", [_vm._v("Men's A Singles and Doubles")])
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "row" }, [
+        _c("div", { staticClass: "col-md-12" }, [
+          _c("h4", [_c("u", [_vm._v("Entry Fees")])])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-md-12 ml-3" }, [
+          _c("p", [
             _vm._v(
-              "All players must check in and be ready to play 15 minutes before their scheduled match!"
+              "Players may register for a maximum of 2 events.  Due to scheduling, we cannot accommodate exceptions"
+            )
+          ]),
+          _vm._v(" "),
+          _c("ul", [
+            _c("li", [_vm._v("Singles: $20")]),
+            _vm._v(" "),
+            _c("li", [_vm._v("Doubles: $40 per team ($20 per player)")])
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "row" }, [
+        _c("div", { staticClass: "col-md-12" }, [
+          _c("h4", [_c("u", [_vm._v("T-Shirts")])])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-md-12 ml-3" }, [
+          _c("p", [
+            _vm._v(
+              "All entrants will receive a T-shirt.  Please enter your requested size in the entry form.  We will do our best to honor all requested sizes,\n                    but may not be able to accomodate XS and XXL sizes due to quantity requirements when ordering."
             )
           ])
         ])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col-md-12" }, [
-        _c("h4", [_c("u", [_vm._v("Events Offered")])])
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "col-md-12 ml-3" }, [
-        _c("ul", [
-          _c("li", [_vm._v("Men's Open Singles and Doubles")]),
-          _vm._v(" "),
-          _c("li", [_vm._v("Women's Open Singles and Doubles")]),
-          _vm._v(" "),
-          _c("li", [_vm._v("Mixed Open Doubles")]),
-          _vm._v(" "),
-          _c("li", [_vm._v("Men's A Singles and Doubles")])
-        ])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col-md-12" }, [
-        _c("h4", [_c("u", [_vm._v("Entry Fees")])])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "col-md-12 ml-3" }, [
-        _c("p", [
-          _vm._v(
-            "Players may register for a maximum of 2 events.  Due to scheduling, we cannot accommodate exceptions"
-          )
+      _c("div", { staticClass: "row" }, [
+        _c("div", { staticClass: "col-md-12" }, [
+          _c("h4", [_c("u", [_vm._v("Awards")])])
         ]),
         _vm._v(" "),
-        _c("ul", [
-          _c("li", [_vm._v("Singles: $20")]),
-          _vm._v(" "),
-          _c("li", [_vm._v("Doubles: $40 per team ($20 per player)")])
-        ])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col-md-12" }, [
-        _c("h4", [_c("u", [_vm._v("T-Shirts")])])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "col-md-12 ml-3" }, [
-        _c("p", [
-          _vm._v(
-            "All entrants will receive a T-shirt.  Please enter your requested size in the entry form.  We will do our best to honor all requested sizes,\n                but may not be able to accomodate XS and XXL sizes due to quantity requirements when ordering."
-          )
-        ])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col-md-12" }, [
-        _c("h4", [_c("u", [_vm._v("Awards")])])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "col-md-12 ml-3" }, [
-        _c("p", [
-          _vm._v(
-            "Awards will be given for champion, runner up, and consolation champion of each event"
-          )
-        ])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col-md-12" }, [
-        _c("h4", [_c("u", [_vm._v("Consolation")])])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "col-md-12 ml-3" }, [
-        _c("p", [
-          _vm._v(
-            "All events have a 2 match guarantee. The inclusion of consolation brackets will be dependent on the number of entries in any given event class."
-          )
-        ])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col-md-12" }, [
-        _c("h4", [_c("u", [_vm._v("Schedule")])])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "col-md-12 ml-3" }, [
-        _c("p", [
-          _vm._v(
-            "We may not be able to schedule players who are unable to compete on Friday evening"
-          )
-        ]),
-        _vm._v(" "),
-        _c("p", [
-          _vm._v(
-            "The schedule may be updated throughout the tournament due to weather and/or extreme heat"
-          )
-        ]),
-        _vm._v(" "),
-        _c("p", [
-          _vm._v(
-            "The schedule and brackets will be updated on this site throughout the tournament"
-          )
-        ]),
-        _vm._v(" "),
-        _c("ul", [
-          _c("li", [
+        _c("div", { staticClass: "col-md-12 ml-3" }, [
+          _c("p", [
             _vm._v(
-              "Friday: Matches will begin at 5:30 PM and be played until sunset"
-            )
-          ]),
-          _vm._v(" "),
-          _c("li", [
-            _vm._v(
-              "Saturday: Matches will begin at 8:00 AM and be played until approximately 4:00 PM"
-            )
-          ]),
-          _vm._v(" "),
-          _c("li", [
-            _vm._v(
-              "Sunday: Matches will begin at 8:30 AM and be played until tournament completion"
+              "Awards will be given for champion, runner up, and consolation champion of each event"
             )
           ])
         ])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col-md-12" }, [
-        _c("h4", [_c("u", [_vm._v("Tournament Rules and Regulations")])])
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "col-md-12 ml-3" }, [
-        _c("p", [
-          _vm._v("The tournament will provide tennis balls for all matches.")
+      _c("div", { staticClass: "row" }, [
+        _c("div", { staticClass: "col-md-12" }, [
+          _c("h4", [_c("u", [_vm._v("Consolation")])])
         ]),
         _vm._v(" "),
-        _c("p", [
-          _c("b", [
+        _c("div", { staticClass: "col-md-12 ml-3" }, [
+          _c("p", [
             _vm._v(
-              "Main Draw Matches - Up to Semi-Finals and All Consolation Draw Matches"
+              "All events have a 2 match guarantee. The inclusion of consolation brackets will be dependent on the number of entries in any given event class."
             )
           ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "row" }, [
+        _c("div", { staticClass: "col-md-12" }, [
+          _c("h4", [_c("u", [_vm._v("Schedule")])])
         ]),
         _vm._v(" "),
-        _c("ul", [
-          _c("li", [
-            _vm._v("Matches will be 2 standard sets with no-ad game scoring")
-          ]),
-          _vm._v(" "),
-          _c("li", [
+        _c("div", { staticClass: "col-md-12 ml-3" }, [
+          _c("p", [
             _vm._v(
-              "If the score becomes deuce, in singles and doubles, the receiver will decide which side of court they would like to receive the final point."
+              "We may not be able to schedule players who are unable to compete on Friday evening"
             )
           ]),
           _vm._v(" "),
-          _c("li", [
+          _c("p", [
             _vm._v(
-              "On deuce points in mixed doubles, server will serve to the receiver of the same gender for the final point."
+              "The schedule may be updated throughout the tournament due to weather and/or extreme heat"
             )
           ]),
           _vm._v(" "),
-          _c("li", [
+          _c("p", [
             _vm._v(
-              "Set tie-break will be played at 6 games all.  Tie-break is first player/team to seven points - winning by two points."
+              "The schedule and brackets will be updated on this site throughout the tournament"
             )
           ]),
           _vm._v(" "),
-          _c("li", [
-            _vm._v(
-              "If the players/teams split the first two sets, a match tie break will be played in lieu of a full third set."
-            )
-          ]),
-          _vm._v(" "),
-          _c("li", [
-            _vm._v(
-              "A match tie-break is the first player/team to ten points - winning by two points."
-            )
-          ]),
-          _vm._v(" "),
-          _c("li", [
-            _vm._v(
-              "Set and match tie-breaks may continue past 7/10 points until a player ahead by two points. (9-7), (12-10), etc."
-            )
-          ]),
-          _vm._v(" "),
-          _c("li", [
-            _vm._v(
-              "In set and match tie-breaks, players/teams will switch sides every 6 points."
-            )
+          _c("ul", [
+            _c("li", [
+              _vm._v(
+                "Friday: Matches will begin at 5:30 PM and be played until sunset"
+              )
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _vm._v(
+                "Saturday: Matches will begin at 8:00 AM and be played until approximately 4:00 PM"
+              )
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _vm._v(
+                "Sunday: Matches will begin at 8:30 AM and be played until tournament completion"
+              )
+            ])
           ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "row" }, [
+        _c("div", { staticClass: "col-md-12" }, [
+          _c("h4", [_c("u", [_vm._v("Tournament Rules and Regulations")])])
         ]),
         _vm._v(" "),
-        _c("p", [
-          _c("b", [
-            _vm._v(
-              "Main Draw Matches - Semi-Finals and Finals (Changes from above)"
-            )
-          ])
-        ]),
-        _vm._v(" "),
-        _c("ul", [
-          _c("li", [
-            _vm._v(
-              "Matches will be 2 standard sets with standard game scoring (deuce and ad points)."
-            )
+        _c("div", { staticClass: "col-md-12 ml-3" }, [
+          _c("p", [
+            _vm._v("The tournament will provide tennis balls for all matches.")
           ]),
           _vm._v(" "),
-          _c("li", [
-            _vm._v(
-              "If the players/teams split the first two sets, a match tie break will be played in lieu of a full third set."
-            )
-          ])
-        ]),
-        _vm._v(" "),
-        _c("p", [_c("b", [_vm._v("Other Considerations")])]),
-        _vm._v(" "),
-        _c("ul", [
-          _c("li", [
-            _vm._v(
-              "Players will play no more than 2 matches back to back during the tournament."
-            )
+          _c("p", [
+            _c("b", [
+              _vm._v(
+                "Main Draw Matches - Up to Semi-Finals and All Consolation Draw Matches"
+              )
+            ])
           ]),
           _vm._v(" "),
-          _c("li", [
-            _vm._v(
-              "Players with back to back matches will have a minimum 75 minute rest before their next match."
-            )
+          _c("ul", [
+            _c("li", [
+              _vm._v("Matches will be 2 standard sets with no-ad game scoring")
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _vm._v(
+                "If the score becomes deuce, in singles and doubles, the receiver will decide which side of court they would like to receive the final point."
+              )
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _vm._v(
+                "On deuce points in mixed doubles, server will serve to the receiver of the same gender for the final point."
+              )
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _vm._v(
+                "Set tie-break will be played at 6 games all.  Tie-break is first player/team to seven points - winning by two points."
+              )
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _vm._v(
+                "If the players/teams split the first two sets, a match tie break will be played in lieu of a full third set."
+              )
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _vm._v(
+                "A match tie-break is the first player/team to ten points - winning by two points."
+              )
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _vm._v(
+                "Set and match tie-breaks may continue past 7/10 points until a player ahead by two points. (9-7), (12-10), etc."
+              )
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _vm._v(
+                "In set and match tie-breaks, players/teams will switch sides every 6 points."
+              )
+            ])
           ]),
           _vm._v(" "),
-          _c("li", [
-            _vm._v(
-              "There will be water at the tournament site provided for players and fans."
-            )
+          _c("p", [
+            _c("b", [
+              _vm._v(
+                "Main Draw Matches - Semi-Finals and Finals (Changes from above)"
+              )
+            ])
           ]),
           _vm._v(" "),
-          _c("li", [
-            _vm._v(
-              "There will be food and drink for purchase across the street at the softball tournament."
-            )
+          _c("ul", [
+            _c("li", [
+              _vm._v(
+                "Matches will be 2 standard sets with standard game scoring (deuce and ad points)."
+              )
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _vm._v(
+                "If the players/teams split the first two sets, a match tie break will be played in lieu of a full third set."
+              )
+            ])
           ]),
           _vm._v(" "),
-          _c("li", [
-            _vm._v("No alcohol is allowed on premise at the tennis tournament.")
+          _c("p", [_c("b", [_vm._v("Other Considerations")])]),
+          _vm._v(" "),
+          _c("ul", [
+            _c("li", [
+              _vm._v(
+                "Players will play no more than 2 matches back to back during the tournament."
+              )
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _vm._v(
+                "Players with back to back matches will have a minimum 75 minute rest before their next match."
+              )
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _vm._v(
+                "There will be water at the tournament site provided for players and fans."
+              )
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _vm._v(
+                "There will be food and drink for purchase across the street at the softball tournament."
+              )
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _vm._v(
+                "No alcohol is allowed on premise at the tennis tournament."
+              )
+            ])
           ])
         ])
       ])
@@ -33406,844 +33396,882 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "form",
-    {
-      staticClass: "form",
-      attrs: { autocomplete: "off" },
-      on: {
-        submit: function($event) {
-          $event.preventDefault()
-          return _vm.submit(_vm.form)
+  return _c("div", { staticClass: "form-content" }, [
+    _c(
+      "form",
+      {
+        staticClass: "form",
+        attrs: { autocomplete: "off" },
+        on: {
+          submit: function($event) {
+            $event.preventDefault()
+            return _vm.submit(_vm.form)
+          }
         }
-      }
-    },
-    [
-      _c("div", { staticClass: "flex form-row form-group" }, [
-        _c("div", { staticClass: "col-md-3" }, [
-          _vm._m(0),
-          _vm._v(" "),
-          _c("input", {
-            directives: [
-              {
-                name: "model",
-                rawName: "v-model",
-                value: _vm.form.first_name,
-                expression: "form.first_name"
-              },
-              {
-                name: "validate",
-                rawName: "v-validate",
-                value: { required: true, max: 50, regex: /^[A-Za-z0-9 .-]+$/ },
-                expression:
-                  "{ required : true, max : 50, regex:/^[A-Za-z0-9 .-]+$/}"
-              }
-            ],
-            staticClass: "form-control",
-            attrs: {
-              id: "first_name",
-              type: "text",
-              placeholder: "First Name",
-              name: "first_name"
-            },
-            domProps: { value: _vm.form.first_name },
-            on: {
-              input: function($event) {
-                if ($event.target.composing) {
-                  return
-                }
-                _vm.$set(_vm.form, "first_name", $event.target.value)
-              }
-            }
-          }),
-          _vm._v(" "),
-          _vm.errors.has("first_name")
-            ? _c("span", [_vm._v(_vm._s(_vm.errors.first("first_name")))])
-            : _vm._e()
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "col-md-3" }, [
-          _vm._m(1),
-          _vm._v(" "),
-          _c("input", {
-            directives: [
-              {
-                name: "model",
-                rawName: "v-model",
-                value: _vm.form.last_name,
-                expression: "form.last_name"
-              },
-              {
-                name: "validate",
-                rawName: "v-validate",
-                value: { required: true, max: 50, regex: /^[A-Za-z0-9 .-]+$/ },
-                expression:
-                  "{ required : true, max : 50, regex:/^[A-Za-z0-9 .-]+$/}"
-              }
-            ],
-            staticClass: "form-control",
-            attrs: {
-              id: "last_name",
-              type: "text",
-              placeholder: "Last Name",
-              name: "last_name"
-            },
-            domProps: { value: _vm.form.last_name },
-            on: {
-              input: function($event) {
-                if ($event.target.composing) {
-                  return
-                }
-                _vm.$set(_vm.form, "last_name", $event.target.value)
-              }
-            }
-          }),
-          _vm._v(" "),
-          _vm.errors.has("last_name")
-            ? _c("span", [_vm._v(_vm._s(_vm.errors.first("last_name")))])
-            : _vm._e()
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "col-md-6" }, [
-          _vm._m(2),
-          _vm._v(" "),
-          _c("input", {
-            directives: [
-              {
-                name: "model",
-                rawName: "v-model",
-                value: _vm.form.email,
-                expression: "form.email"
-              },
-              {
-                name: "validate",
-                rawName: "v-validate",
-                value: "required|email|max:100",
-                expression: "'required|email|max:100'"
-              }
-            ],
-            staticClass: "form-control",
-            attrs: {
-              id: "email",
-              type: "text",
-              placeholder: "Email Address",
-              name: "email"
-            },
-            domProps: { value: _vm.form.email },
-            on: {
-              input: function($event) {
-                if ($event.target.composing) {
-                  return
-                }
-                _vm.$set(_vm.form, "email", $event.target.value)
-              }
-            }
-          }),
-          _vm._v(" "),
-          _vm.errors.has("email")
-            ? _c("span", [_vm._v(_vm._s(_vm.errors.first("email")))])
-            : _vm._e()
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "flex form-row form-group" }, [
-        _c("div", { staticClass: "col-md-8" }, [
-          _vm._m(3),
-          _vm._v(" "),
-          _c("input", {
-            directives: [
-              {
-                name: "model",
-                rawName: "v-model",
-                value: _vm.form.address1,
-                expression: "form.address1"
-              },
-              {
-                name: "validate",
-                rawName: "v-validate",
-                value: { required: true, max: 100, regex: /^[A-Za-z0-9 #.]+$/ },
-                expression:
-                  "{ required : true, max : 100, regex:/^[A-Za-z0-9 #.]+$/}"
-              }
-            ],
-            staticClass: "form-control",
-            attrs: {
-              id: "address1",
-              type: "text",
-              placeholder: "Address",
-              name: "address1"
-            },
-            domProps: { value: _vm.form.address1 },
-            on: {
-              input: function($event) {
-                if ($event.target.composing) {
-                  return
-                }
-                _vm.$set(_vm.form, "address1", $event.target.value)
-              }
-            }
-          }),
-          _vm._v(" "),
-          _vm.errors.has("address1")
-            ? _c("span", [_vm._v(_vm._s(_vm.errors.first("address1")))])
-            : _vm._e()
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "col-md-4" }, [
-          _c(
-            "label",
-            {
-              staticClass: "col-form-label float-left",
-              attrs: { for: "address2" }
-            },
-            [_vm._v("Address 2")]
-          ),
-          _vm._v(" "),
-          _c("input", {
-            directives: [
-              {
-                name: "validate",
-                rawName: "v-validate",
-                value: { max: 50, regex: /^[A-Za-z0-9 #.]+$/ },
-                expression: "{ max : 50, regex:/^[A-Za-z0-9 #.]+$/}"
-              },
-              {
-                name: "model",
-                rawName: "v-model",
-                value: _vm.form.address2,
-                expression: "form.address2"
-              }
-            ],
-            staticClass: "form-control",
-            attrs: {
-              id: "address2",
-              type: "text",
-              placeholder: "Apt/Unit #",
-              name: "address2"
-            },
-            domProps: { value: _vm.form.address2 },
-            on: {
-              input: function($event) {
-                if ($event.target.composing) {
-                  return
-                }
-                _vm.$set(_vm.form, "address2", $event.target.value)
-              }
-            }
-          }),
-          _vm._v(" "),
-          _vm.errors.has("address2")
-            ? _c("span", [_vm._v(_vm._s(_vm.errors.first("address2")))])
-            : _vm._e()
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "flex form-row form-group" }, [
-        _c("div", { staticClass: "col-md-4" }, [
-          _vm._m(4),
-          _vm._v(" "),
-          _c("input", {
-            directives: [
-              {
-                name: "model",
-                rawName: "v-model",
-                value: _vm.form.city,
-                expression: "form.city"
-              },
-              {
-                name: "validate",
-                rawName: "v-validate",
-                value: { required: true, max: 50, regex: /^[A-Za-z0-9 #.]+$/ },
-                expression:
-                  "{ required : true, max : 50, regex:/^[A-Za-z0-9 #.]+$/}"
-              }
-            ],
-            staticClass: "form-control",
-            attrs: {
-              id: "city",
-              type: "text",
-              placeholder: "City",
-              name: "city"
-            },
-            domProps: { value: _vm.form.city },
-            on: {
-              input: function($event) {
-                if ($event.target.composing) {
-                  return
-                }
-                _vm.$set(_vm.form, "city", $event.target.value)
-              }
-            }
-          }),
-          _vm._v(" "),
-          _vm.errors.has("city")
-            ? _c("span", [_vm._v(_vm._s(_vm.errors.first("city")))])
-            : _vm._e()
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "col-md-2" }, [
-          _vm._m(5),
-          _vm._v(" "),
-          _c("div", { staticClass: "inline-block relative w-full" }, [
-            _c(
-              "select",
-              {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.form.state,
-                    expression: "form.state"
-                  },
-                  {
-                    name: "validate",
-                    rawName: "v-validate",
-                    value: "required|length:2",
-                    expression: "'required|length:2'"
-                  }
-                ],
-                staticClass: "form-control",
-                attrs: { id: "state", type: "text", name: "state" },
-                on: {
-                  change: function($event) {
-                    var $$selectedVal = Array.prototype.filter
-                      .call($event.target.options, function(o) {
-                        return o.selected
-                      })
-                      .map(function(o) {
-                        var val = "_value" in o ? o._value : o.value
-                        return val
-                      })
-                    _vm.$set(
-                      _vm.form,
-                      "state",
-                      $event.target.multiple ? $$selectedVal : $$selectedVal[0]
-                    )
-                  }
-                }
-              },
-              [
-                _c("option", { domProps: { value: null } }, [
-                  _vm._v("Please Select")
-                ]),
-                _vm._v(" "),
-                _vm._l(_vm.states, function(state, key, index) {
-                  return _c(
-                    "option",
-                    { key: index, domProps: { value: key } },
-                    [_vm._v(_vm._s(state))]
-                  )
-                })
-              ],
-              2
-            )
-          ]),
-          _vm._v(" "),
-          _vm.errors.has("state")
-            ? _c("span", [_vm._v(_vm._s(_vm.errors.first("state")))])
-            : _vm._e()
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "col-md-3" }, [
-          _vm._m(6),
-          _vm._v(" "),
-          _c("input", {
-            directives: [
-              {
-                name: "model",
-                rawName: "v-model",
-                value: _vm.form.zip,
-                expression: "form.zip"
-              },
-              {
-                name: "validate",
-                rawName: "v-validate",
-                value: { required: true, max: 10, regex: /^[A-Za-z0-9 #.-]+$/ },
-                expression:
-                  "{ required : true, max : 10, regex:/^[A-Za-z0-9 #.-]+$/}"
-              }
-            ],
-            staticClass: "form-control",
-            attrs: {
-              id: "zip",
-              type: "text",
-              placeholder: "Zip/Postal Code",
-              name: "zip",
-              "data-vv-as": "zip/postal code"
-            },
-            domProps: { value: _vm.form.zip },
-            on: {
-              input: function($event) {
-                if ($event.target.composing) {
-                  return
-                }
-                _vm.$set(_vm.form, "zip", $event.target.value)
-              }
-            }
-          }),
-          _vm._v(" "),
-          _vm.errors.has("zip")
-            ? _c("span", [_vm._v(_vm._s(_vm.errors.first("zip")))])
-            : _vm._e()
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "flex form-row form-group" }, [
-        _c("div", { staticClass: "col-md-4" }, [
-          _vm._m(7),
-          _vm._v(" "),
-          _c("input", {
-            directives: [
-              {
-                name: "model",
-                rawName: "v-model",
-                value: _vm.form.phone_number,
-                expression: "form.phone_number"
-              },
-              {
-                name: "validate",
-                rawName: "v-validate",
-                value: { required: true, max: 15, regex: /^[A-Za-z0-9 #.-]+$/ },
-                expression:
-                  "{ required : true, max : 15, regex:/^[A-Za-z0-9 #.-]+$/}"
-              }
-            ],
-            staticClass: "form-control",
-            attrs: {
-              id: "phone_number",
-              type: "text",
-              placeholder: "Phone Number",
-              name: "phone_number",
-              "data-vv-as": "phone number"
-            },
-            domProps: { value: _vm.form.phone_number },
-            on: {
-              input: function($event) {
-                if ($event.target.composing) {
-                  return
-                }
-                _vm.$set(_vm.form, "phone_number", $event.target.value)
-              }
-            }
-          }),
-          _vm._v(" "),
-          _vm.errors.has("phone_number")
-            ? _c("span", [_vm._v(_vm._s(_vm.errors.first("phone_number")))])
-            : _vm._e()
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "col-md-4 offset-md-2" }, [
-          _vm._m(8),
-          _vm._v(" "),
-          _c("div", { staticClass: "inline-block relative w-full" }, [
-            _c(
-              "select",
-              {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.form.shirt_size,
-                    expression: "form.shirt_size"
-                  },
-                  {
-                    name: "validate",
-                    rawName: "v-validate",
-                    value: "required|length:2",
-                    expression: "'required|length:2'"
-                  }
-                ],
-                staticClass: "form-control",
-                attrs: { id: "shirt_size", type: "text", name: "shirt_size" },
-                on: {
-                  change: function($event) {
-                    var $$selectedVal = Array.prototype.filter
-                      .call($event.target.options, function(o) {
-                        return o.selected
-                      })
-                      .map(function(o) {
-                        var val = "_value" in o ? o._value : o.value
-                        return val
-                      })
-                    _vm.$set(
-                      _vm.form,
-                      "shirt_size",
-                      $event.target.multiple ? $$selectedVal : $$selectedVal[0]
-                    )
-                  }
-                }
-              },
-              [
-                _c("option", { domProps: { value: null } }, [
-                  _vm._v("Please Select")
-                ]),
-                _vm._v(" "),
-                _vm._l(_vm.shirtSizes, function(shirtSize, key, index) {
-                  return _c(
-                    "option",
-                    { key: index, domProps: { value: key } },
-                    [_vm._v(_vm._s(shirtSize))]
-                  )
-                })
-              ],
-              2
-            )
-          ]),
-          _vm._v(" "),
-          _vm.errors.has("shirt_size")
-            ? _c("span", [_vm._v(_vm._s(_vm.errors.first("shirt_size")))])
-            : _vm._e()
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "flex form-row form-group" }, [
-        _c("div", { staticClass: "col-md-3" }, [
-          _vm._m(9),
-          _vm._v(" "),
-          _c("div", { staticClass: "inline-block relative w-full" }, [
-            _c(
-              "select",
-              {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.form.event1,
-                    expression: "form.event1"
-                  },
-                  {
-                    name: "validate",
-                    rawName: "v-validate",
-                    value: "required|length:3",
-                    expression: "'required|length:3'"
-                  }
-                ],
-                staticClass: "form-control",
-                attrs: {
-                  id: "event1",
-                  type: "text",
-                  name: "event1",
-                  "data-vv-as": "primary event"
+      },
+      [
+        _c("div", { staticClass: "flex form-row form-group" }, [
+          _c("div", { staticClass: "col-md-3" }, [
+            _vm._m(0),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.form.first_name,
+                  expression: "form.first_name"
                 },
-                on: {
-                  change: function($event) {
-                    var $$selectedVal = Array.prototype.filter
-                      .call($event.target.options, function(o) {
-                        return o.selected
-                      })
-                      .map(function(o) {
-                        var val = "_value" in o ? o._value : o.value
-                        return val
-                      })
-                    _vm.$set(
-                      _vm.form,
-                      "event1",
-                      $event.target.multiple ? $$selectedVal : $$selectedVal[0]
-                    )
-                  }
-                }
-              },
-              [
-                _c("option", { domProps: { value: null } }, [
-                  _vm._v("Please Select")
-                ]),
-                _vm._v(" "),
-                _vm._l(_vm.primary_events, function(event1, key, index) {
-                  return _c(
-                    "option",
-                    { key: index, domProps: { value: key } },
-                    [_vm._v(_vm._s(event1))]
-                  )
-                })
-              ],
-              2
-            )
-          ]),
-          _vm._v(" "),
-          _vm.errors.has("event1")
-            ? _c("span", [_vm._v(_vm._s(_vm.errors.first("event1")))])
-            : _vm._e()
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "col-md-3" }, [
-          _c(
-            "label",
-            {
-              staticClass: "col-form-label float-left",
-              attrs: { for: "event1_partner" }
-            },
-            [_vm._v("Doubles Partner")]
-          ),
-          _vm._v(" "),
-          _c("input", {
-            directives: [
-              {
-                name: "model",
-                rawName: "v-model",
-                value: _vm.form.event1_partner,
-                expression: "form.event1_partner"
-              },
-              {
-                name: "validate",
-                rawName: "v-validate",
-                value: { max: 50, regex: /^[A-Za-z0-9 ]+$/ },
-                expression: "{ max : 50, regex:/^[A-Za-z0-9 ]+$/}"
-              }
-            ],
-            staticClass: "form-control",
-            attrs: {
-              id: "event1_partner",
-              type: "text",
-              placeholder: "Doubles Partner Name (if known)",
-              name: "event1_partner",
-              "data-vv-as": "doubles partner"
-            },
-            domProps: { value: _vm.form.event1_partner },
-            on: {
-              input: function($event) {
-                if ($event.target.composing) {
-                  return
-                }
-                _vm.$set(_vm.form, "event1_partner", $event.target.value)
-              }
-            }
-          }),
-          _vm._v(" "),
-          _vm.errors.has("event1_partner")
-            ? _c("span", [_vm._v(_vm._s(_vm.errors.first("event1_partner")))])
-            : _vm._e()
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "col-md-3" }, [
-          _c(
-            "label",
-            {
-              staticClass: "col-form-label float-left",
-              attrs: { for: "event2" }
-            },
-            [_vm._v("Event 2")]
-          ),
-          _vm._v(" "),
-          _c("div", { staticClass: "inline-block relative w-full" }, [
-            _c(
-              "select",
-              {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.form.event2,
-                    expression: "form.event2"
+                {
+                  name: "validate",
+                  rawName: "v-validate",
+                  value: {
+                    required: true,
+                    max: 50,
+                    regex: /^[A-Za-z0-9 .-]+$/
                   },
-                  {
-                    name: "validate",
-                    rawName: "v-validate",
-                    value: { is_not: _vm.form.event1, max: 3 },
-                    expression: "{ is_not : form.event1, max : 3 }"
-                  }
-                ],
-                staticClass: "form-control",
-                attrs: {
-                  id: "event2",
-                  type: "text",
-                  name: "event2",
-                  "data-vv-as": "second event"
-                },
-                on: {
-                  change: function($event) {
-                    var $$selectedVal = Array.prototype.filter
-                      .call($event.target.options, function(o) {
-                        return o.selected
-                      })
-                      .map(function(o) {
-                        var val = "_value" in o ? o._value : o.value
-                        return val
-                      })
-                    _vm.$set(
-                      _vm.form,
-                      "event2",
-                      $event.target.multiple ? $$selectedVal : $$selectedVal[0]
-                    )
-                  }
+                  expression:
+                    "{ required : true, max : 50, regex:/^[A-Za-z0-9 .-]+$/}"
                 }
-              },
-              [
-                _vm._v(">\n                    "),
-                _c("option", { domProps: { value: null } }, [
-                  _vm._v("Only Select If Playing 2 Events")
-                ]),
-                _vm._v(" "),
-                _vm._l(_vm.secondary_events, function(event2, key, index) {
-                  return _c(
-                    "option",
-                    { key: index, domProps: { value: key } },
-                    [_vm._v(_vm._s(event2))]
-                  )
-                })
               ],
-              2
-            )
+              staticClass: "form-control",
+              attrs: {
+                id: "first_name",
+                type: "text",
+                placeholder: "First Name",
+                name: "first_name"
+              },
+              domProps: { value: _vm.form.first_name },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.form, "first_name", $event.target.value)
+                }
+              }
+            }),
+            _vm._v(" "),
+            _vm.errors.has("first_name")
+              ? _c("span", [_vm._v(_vm._s(_vm.errors.first("first_name")))])
+              : _vm._e()
           ]),
           _vm._v(" "),
-          _vm.errors.has("event2")
-            ? _c("span", [_vm._v(_vm._s(_vm.errors.first("event2")))])
-            : _vm._e()
+          _c("div", { staticClass: "col-md-3" }, [
+            _vm._m(1),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.form.last_name,
+                  expression: "form.last_name"
+                },
+                {
+                  name: "validate",
+                  rawName: "v-validate",
+                  value: {
+                    required: true,
+                    max: 50,
+                    regex: /^[A-Za-z0-9 .-]+$/
+                  },
+                  expression:
+                    "{ required : true, max : 50, regex:/^[A-Za-z0-9 .-]+$/}"
+                }
+              ],
+              staticClass: "form-control",
+              attrs: {
+                id: "last_name",
+                type: "text",
+                placeholder: "Last Name",
+                name: "last_name"
+              },
+              domProps: { value: _vm.form.last_name },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.form, "last_name", $event.target.value)
+                }
+              }
+            }),
+            _vm._v(" "),
+            _vm.errors.has("last_name")
+              ? _c("span", [_vm._v(_vm._s(_vm.errors.first("last_name")))])
+              : _vm._e()
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-6" }, [
+            _vm._m(2),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.form.email,
+                  expression: "form.email"
+                },
+                {
+                  name: "validate",
+                  rawName: "v-validate",
+                  value: "required|email|max:100",
+                  expression: "'required|email|max:100'"
+                }
+              ],
+              staticClass: "form-control",
+              attrs: {
+                id: "email",
+                type: "text",
+                placeholder: "Email Address",
+                name: "email"
+              },
+              domProps: { value: _vm.form.email },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.form, "email", $event.target.value)
+                }
+              }
+            }),
+            _vm._v(" "),
+            _vm.errors.has("email")
+              ? _c("span", [_vm._v(_vm._s(_vm.errors.first("email")))])
+              : _vm._e()
+          ])
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "col-md-3" }, [
-          _c(
-            "label",
-            {
-              staticClass: "col-form-label float-left",
-              attrs: { for: "event2_partner" }
-            },
-            [_vm._v("Doubles Partner")]
-          ),
-          _vm._v(" "),
-          _c("input", {
-            directives: [
-              {
-                name: "model",
-                rawName: "v-model",
-                value: _vm.form.event2_partner,
-                expression: "form.event2_partner"
-              },
-              {
-                name: "validate",
-                rawName: "v-validate",
-                value: { max: 50, regex: /^[A-Za-z0-9 ]+$/ },
-                expression: "{ max : 50, regex:/^[A-Za-z0-9 ]+$/}"
-              }
-            ],
-            staticClass: "form-control",
-            attrs: {
-              id: "event2_partner",
-              type: "text",
-              placeholder: "Doubles Partner Name (if known)",
-              name: "event2_partner",
-              "data-vv-as": "doubles partner"
-            },
-            domProps: { value: _vm.form.event2_partner },
-            on: {
-              input: function($event) {
-                if ($event.target.composing) {
-                  return
+        _c("div", { staticClass: "flex form-row form-group" }, [
+          _c("div", { staticClass: "col-md-8" }, [
+            _vm._m(3),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.form.address1,
+                  expression: "form.address1"
+                },
+                {
+                  name: "validate",
+                  rawName: "v-validate",
+                  value: {
+                    required: true,
+                    max: 100,
+                    regex: /^[A-Za-z0-9 #.]+$/
+                  },
+                  expression:
+                    "{ required : true, max : 100, regex:/^[A-Za-z0-9 #.]+$/}"
                 }
-                _vm.$set(_vm.form, "event2_partner", $event.target.value)
-              }
-            }
-          }),
-          _vm._v(" "),
-          _vm.errors.has("event2_partner")
-            ? _c("span", [_vm._v(_vm._s(_vm.errors.first("event2_partner")))])
-            : _vm._e()
-        ])
-      ]),
-      _vm._v(" "),
-      _vm._m(10),
-      _vm._v(" "),
-      _c("div", { staticClass: "flex form-row form-group" }, [
-        _c("div", { staticClass: "col-md-4" }, [
-          _vm._m(11),
-          _vm._v(" "),
-          _c("input", {
-            directives: [
-              {
-                name: "model",
-                rawName: "v-model",
-                value: _vm.form.signed_name,
-                expression: "form.signed_name"
+              ],
+              staticClass: "form-control",
+              attrs: {
+                id: "address1",
+                type: "text",
+                placeholder: "Address",
+                name: "address1"
               },
-              {
-                name: "validate",
-                rawName: "v-validate",
-                value: { required: true, max: 50, regex: /^[A-Za-z0-9 .-]+$/ },
-                expression:
-                  "{ required : true, max : 50, regex:/^[A-Za-z0-9 .-]+$/}"
-              }
-            ],
-            staticClass: "form-control",
-            attrs: {
-              id: "signed_name",
-              type: "text",
-              placeholder: "Authorized Signee",
-              name: "signed_name",
-              "data-vv-as": "authorized signed"
-            },
-            domProps: { value: _vm.form.signed_name },
-            on: {
-              input: function($event) {
-                if ($event.target.composing) {
-                  return
+              domProps: { value: _vm.form.address1 },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.form, "address1", $event.target.value)
                 }
-                _vm.$set(_vm.form, "signed_name", $event.target.value)
               }
-            }
-          }),
+            }),
+            _vm._v(" "),
+            _vm.errors.has("address1")
+              ? _c("span", [_vm._v(_vm._s(_vm.errors.first("address1")))])
+              : _vm._e()
+          ]),
           _vm._v(" "),
-          _vm.errors.has("signed_name")
-            ? _c("span", [_vm._v(_vm._s(_vm.errors.first("signed_name")))])
-            : _vm._e()
-        ]),
-        _vm._v(" "),
-        _vm._m(12)
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "flex form-row form-group pt-2 mb-4" }, [
-        _c(
-          "div",
-          { staticClass: "col-md-4" },
-          [
-            _c("vue-recaptcha", {
+          _c("div", { staticClass: "col-md-4" }, [
+            _c(
+              "label",
+              {
+                staticClass: "col-form-label float-left",
+                attrs: { for: "address2" }
+              },
+              [_vm._v("Address 2")]
+            ),
+            _vm._v(" "),
+            _c("input", {
               directives: [
                 {
                   name: "validate",
                   rawName: "v-validate",
-                  value: "required|min:1",
-                  expression: "'required|min:1'"
+                  value: { max: 50, regex: /^[A-Za-z0-9 #.]+$/ },
+                  expression: "{ max : 50, regex:/^[A-Za-z0-9 #.]+$/}"
+                },
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.form.address2,
+                  expression: "form.address2"
                 }
               ],
-              ref: "recaptcha",
+              staticClass: "form-control",
               attrs: {
-                name: "recaptcha",
-                size: "normal",
-                sitekey: "6LczHaMUAAAAAFClGpCVOduY6SmOi93QwePThjkE"
+                id: "address2",
+                type: "text",
+                placeholder: "Apt/Unit #",
+                name: "address2"
               },
+              domProps: { value: _vm.form.address2 },
               on: {
-                verify: _vm.onCaptchaVerified,
-                expired: _vm.onCaptchaExpired
-              },
-              model: {
-                value: _vm.form.recaptcha,
-                callback: function($$v) {
-                  _vm.$set(_vm.form, "recaptcha", $$v)
-                },
-                expression: "form.recaptcha"
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.form, "address2", $event.target.value)
+                }
               }
             }),
             _vm._v(" "),
-            _vm.errors.has("recaptcha")
-              ? _c("span", [_vm._v(_vm._s(_vm.errors.first("recaptcha")))])
+            _vm.errors.has("address2")
+              ? _c("span", [_vm._v(_vm._s(_vm.errors.first("address2")))])
               : _vm._e()
-          ],
-          1
-        )
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "flex form-row form-group mb-5" }, [
-        _c("div", { staticClass: "col-md-3" }, [
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "flex form-row form-group" }, [
+          _c("div", { staticClass: "col-md-4" }, [
+            _vm._m(4),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.form.city,
+                  expression: "form.city"
+                },
+                {
+                  name: "validate",
+                  rawName: "v-validate",
+                  value: {
+                    required: true,
+                    max: 50,
+                    regex: /^[A-Za-z0-9 #.]+$/
+                  },
+                  expression:
+                    "{ required : true, max : 50, regex:/^[A-Za-z0-9 #.]+$/}"
+                }
+              ],
+              staticClass: "form-control",
+              attrs: {
+                id: "city",
+                type: "text",
+                placeholder: "City",
+                name: "city"
+              },
+              domProps: { value: _vm.form.city },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.form, "city", $event.target.value)
+                }
+              }
+            }),
+            _vm._v(" "),
+            _vm.errors.has("city")
+              ? _c("span", [_vm._v(_vm._s(_vm.errors.first("city")))])
+              : _vm._e()
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-2" }, [
+            _vm._m(5),
+            _vm._v(" "),
+            _c("div", { staticClass: "inline-block relative w-full" }, [
+              _c(
+                "select",
+                {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.form.state,
+                      expression: "form.state"
+                    },
+                    {
+                      name: "validate",
+                      rawName: "v-validate",
+                      value: "required|length:2",
+                      expression: "'required|length:2'"
+                    }
+                  ],
+                  staticClass: "form-control",
+                  attrs: { id: "state", type: "text", name: "state" },
+                  on: {
+                    change: function($event) {
+                      var $$selectedVal = Array.prototype.filter
+                        .call($event.target.options, function(o) {
+                          return o.selected
+                        })
+                        .map(function(o) {
+                          var val = "_value" in o ? o._value : o.value
+                          return val
+                        })
+                      _vm.$set(
+                        _vm.form,
+                        "state",
+                        $event.target.multiple
+                          ? $$selectedVal
+                          : $$selectedVal[0]
+                      )
+                    }
+                  }
+                },
+                [
+                  _c("option", { domProps: { value: null } }, [
+                    _vm._v("Please Select")
+                  ]),
+                  _vm._v(" "),
+                  _vm._l(_vm.states, function(state, key, index) {
+                    return _c(
+                      "option",
+                      { key: index, domProps: { value: key } },
+                      [_vm._v(_vm._s(state))]
+                    )
+                  })
+                ],
+                2
+              )
+            ]),
+            _vm._v(" "),
+            _vm.errors.has("state")
+              ? _c("span", [_vm._v(_vm._s(_vm.errors.first("state")))])
+              : _vm._e()
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-3" }, [
+            _vm._m(6),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.form.zip,
+                  expression: "form.zip"
+                },
+                {
+                  name: "validate",
+                  rawName: "v-validate",
+                  value: {
+                    required: true,
+                    max: 10,
+                    regex: /^[A-Za-z0-9 #.-]+$/
+                  },
+                  expression:
+                    "{ required : true, max : 10, regex:/^[A-Za-z0-9 #.-]+$/}"
+                }
+              ],
+              staticClass: "form-control",
+              attrs: {
+                id: "zip",
+                type: "text",
+                placeholder: "Zip/Postal Code",
+                name: "zip",
+                "data-vv-as": "zip/postal code"
+              },
+              domProps: { value: _vm.form.zip },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.form, "zip", $event.target.value)
+                }
+              }
+            }),
+            _vm._v(" "),
+            _vm.errors.has("zip")
+              ? _c("span", [_vm._v(_vm._s(_vm.errors.first("zip")))])
+              : _vm._e()
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "flex form-row form-group" }, [
+          _c("div", { staticClass: "col-md-4" }, [
+            _vm._m(7),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.form.phone_number,
+                  expression: "form.phone_number"
+                },
+                {
+                  name: "validate",
+                  rawName: "v-validate",
+                  value: {
+                    required: true,
+                    max: 15,
+                    regex: /^[A-Za-z0-9 #.-]+$/
+                  },
+                  expression:
+                    "{ required : true, max : 15, regex:/^[A-Za-z0-9 #.-]+$/}"
+                }
+              ],
+              staticClass: "form-control",
+              attrs: {
+                id: "phone_number",
+                type: "text",
+                placeholder: "Phone Number",
+                name: "phone_number",
+                "data-vv-as": "phone number"
+              },
+              domProps: { value: _vm.form.phone_number },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.form, "phone_number", $event.target.value)
+                }
+              }
+            }),
+            _vm._v(" "),
+            _vm.errors.has("phone_number")
+              ? _c("span", [_vm._v(_vm._s(_vm.errors.first("phone_number")))])
+              : _vm._e()
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-4 offset-md-2" }, [
+            _vm._m(8),
+            _vm._v(" "),
+            _c("div", { staticClass: "inline-block relative w-full" }, [
+              _c(
+                "select",
+                {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.form.shirt_size,
+                      expression: "form.shirt_size"
+                    },
+                    {
+                      name: "validate",
+                      rawName: "v-validate",
+                      value: "required|length:2",
+                      expression: "'required|length:2'"
+                    }
+                  ],
+                  staticClass: "form-control",
+                  attrs: { id: "shirt_size", type: "text", name: "shirt_size" },
+                  on: {
+                    change: function($event) {
+                      var $$selectedVal = Array.prototype.filter
+                        .call($event.target.options, function(o) {
+                          return o.selected
+                        })
+                        .map(function(o) {
+                          var val = "_value" in o ? o._value : o.value
+                          return val
+                        })
+                      _vm.$set(
+                        _vm.form,
+                        "shirt_size",
+                        $event.target.multiple
+                          ? $$selectedVal
+                          : $$selectedVal[0]
+                      )
+                    }
+                  }
+                },
+                [
+                  _c("option", { domProps: { value: null } }, [
+                    _vm._v("Please Select")
+                  ]),
+                  _vm._v(" "),
+                  _vm._l(_vm.shirtSizes, function(shirtSize, key, index) {
+                    return _c(
+                      "option",
+                      { key: index, domProps: { value: key } },
+                      [_vm._v(_vm._s(shirtSize))]
+                    )
+                  })
+                ],
+                2
+              )
+            ]),
+            _vm._v(" "),
+            _vm.errors.has("shirt_size")
+              ? _c("span", [_vm._v(_vm._s(_vm.errors.first("shirt_size")))])
+              : _vm._e()
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "flex form-row form-group" }, [
+          _c("div", { staticClass: "col-md-3" }, [
+            _vm._m(9),
+            _vm._v(" "),
+            _c("div", { staticClass: "inline-block relative w-full" }, [
+              _c(
+                "select",
+                {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.form.event1,
+                      expression: "form.event1"
+                    },
+                    {
+                      name: "validate",
+                      rawName: "v-validate",
+                      value: "required|length:3",
+                      expression: "'required|length:3'"
+                    }
+                  ],
+                  staticClass: "form-control",
+                  attrs: {
+                    id: "event1",
+                    type: "text",
+                    name: "event1",
+                    "data-vv-as": "primary event"
+                  },
+                  on: {
+                    change: function($event) {
+                      var $$selectedVal = Array.prototype.filter
+                        .call($event.target.options, function(o) {
+                          return o.selected
+                        })
+                        .map(function(o) {
+                          var val = "_value" in o ? o._value : o.value
+                          return val
+                        })
+                      _vm.$set(
+                        _vm.form,
+                        "event1",
+                        $event.target.multiple
+                          ? $$selectedVal
+                          : $$selectedVal[0]
+                      )
+                    }
+                  }
+                },
+                [
+                  _c("option", { domProps: { value: null } }, [
+                    _vm._v("Please Select")
+                  ]),
+                  _vm._v(" "),
+                  _vm._l(_vm.primary_events, function(event1, key, index) {
+                    return _c(
+                      "option",
+                      { key: index, domProps: { value: key } },
+                      [_vm._v(_vm._s(event1))]
+                    )
+                  })
+                ],
+                2
+              )
+            ]),
+            _vm._v(" "),
+            _vm.errors.has("event1")
+              ? _c("span", [_vm._v(_vm._s(_vm.errors.first("event1")))])
+              : _vm._e()
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-3" }, [
+            _c(
+              "label",
+              {
+                staticClass: "col-form-label float-left",
+                attrs: { for: "event1_partner" }
+              },
+              [_vm._v("Doubles Partner")]
+            ),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.form.event1_partner,
+                  expression: "form.event1_partner"
+                },
+                {
+                  name: "validate",
+                  rawName: "v-validate",
+                  value: { max: 50, regex: /^[A-Za-z0-9 ]+$/ },
+                  expression: "{ max : 50, regex:/^[A-Za-z0-9 ]+$/}"
+                }
+              ],
+              staticClass: "form-control",
+              attrs: {
+                id: "event1_partner",
+                type: "text",
+                placeholder: "Doubles Partner Name (if known)",
+                name: "event1_partner",
+                "data-vv-as": "doubles partner"
+              },
+              domProps: { value: _vm.form.event1_partner },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.form, "event1_partner", $event.target.value)
+                }
+              }
+            }),
+            _vm._v(" "),
+            _vm.errors.has("event1_partner")
+              ? _c("span", [_vm._v(_vm._s(_vm.errors.first("event1_partner")))])
+              : _vm._e()
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-3" }, [
+            _c(
+              "label",
+              {
+                staticClass: "col-form-label float-left",
+                attrs: { for: "event2" }
+              },
+              [_vm._v("Event 2")]
+            ),
+            _vm._v(" "),
+            _c("div", { staticClass: "inline-block relative w-full" }, [
+              _c(
+                "select",
+                {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.form.event2,
+                      expression: "form.event2"
+                    },
+                    {
+                      name: "validate",
+                      rawName: "v-validate",
+                      value: { is_not: _vm.form.event1, max: 3 },
+                      expression: "{ is_not : form.event1, max : 3 }"
+                    }
+                  ],
+                  staticClass: "form-control",
+                  attrs: {
+                    id: "event2",
+                    type: "text",
+                    name: "event2",
+                    "data-vv-as": "second event"
+                  },
+                  on: {
+                    change: function($event) {
+                      var $$selectedVal = Array.prototype.filter
+                        .call($event.target.options, function(o) {
+                          return o.selected
+                        })
+                        .map(function(o) {
+                          var val = "_value" in o ? o._value : o.value
+                          return val
+                        })
+                      _vm.$set(
+                        _vm.form,
+                        "event2",
+                        $event.target.multiple
+                          ? $$selectedVal
+                          : $$selectedVal[0]
+                      )
+                    }
+                  }
+                },
+                [
+                  _vm._v(">\n                        "),
+                  _c("option", { domProps: { value: null } }, [
+                    _vm._v("Only Select If Playing 2 Events")
+                  ]),
+                  _vm._v(" "),
+                  _vm._l(_vm.secondary_events, function(event2, key, index) {
+                    return _c(
+                      "option",
+                      { key: index, domProps: { value: key } },
+                      [_vm._v(_vm._s(event2))]
+                    )
+                  })
+                ],
+                2
+              )
+            ]),
+            _vm._v(" "),
+            _vm.errors.has("event2")
+              ? _c("span", [_vm._v(_vm._s(_vm.errors.first("event2")))])
+              : _vm._e()
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-3" }, [
+            _c(
+              "label",
+              {
+                staticClass: "col-form-label float-left",
+                attrs: { for: "event2_partner" }
+              },
+              [_vm._v("Doubles Partner")]
+            ),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.form.event2_partner,
+                  expression: "form.event2_partner"
+                },
+                {
+                  name: "validate",
+                  rawName: "v-validate",
+                  value: { max: 50, regex: /^[A-Za-z0-9 ]+$/ },
+                  expression: "{ max : 50, regex:/^[A-Za-z0-9 ]+$/}"
+                }
+              ],
+              staticClass: "form-control",
+              attrs: {
+                id: "event2_partner",
+                type: "text",
+                placeholder: "Doubles Partner Name (if known)",
+                name: "event2_partner",
+                "data-vv-as": "doubles partner"
+              },
+              domProps: { value: _vm.form.event2_partner },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.form, "event2_partner", $event.target.value)
+                }
+              }
+            }),
+            _vm._v(" "),
+            _vm.errors.has("event2_partner")
+              ? _c("span", [_vm._v(_vm._s(_vm.errors.first("event2_partner")))])
+              : _vm._e()
+          ])
+        ]),
+        _vm._v(" "),
+        _vm._m(10),
+        _vm._v(" "),
+        _c("div", { staticClass: "flex form-row form-group" }, [
+          _c("div", { staticClass: "col-md-4" }, [
+            _vm._m(11),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.form.signed_name,
+                  expression: "form.signed_name"
+                },
+                {
+                  name: "validate",
+                  rawName: "v-validate",
+                  value: {
+                    required: true,
+                    max: 50,
+                    regex: /^[A-Za-z0-9 .-]+$/
+                  },
+                  expression:
+                    "{ required : true, max : 50, regex:/^[A-Za-z0-9 .-]+$/}"
+                }
+              ],
+              staticClass: "form-control",
+              attrs: {
+                id: "signed_name",
+                type: "text",
+                placeholder: "Authorized Signee",
+                name: "signed_name",
+                "data-vv-as": "authorized signed"
+              },
+              domProps: { value: _vm.form.signed_name },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.form, "signed_name", $event.target.value)
+                }
+              }
+            }),
+            _vm._v(" "),
+            _vm.errors.has("signed_name")
+              ? _c("span", [_vm._v(_vm._s(_vm.errors.first("signed_name")))])
+              : _vm._e()
+          ]),
+          _vm._v(" "),
+          _vm._m(12)
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "flex form-row form-group pt-2 mb-4" }, [
           _c(
-            "button",
-            {
-              staticClass: "btn btn-primary",
-              attrs: { disabled: _vm.pending || _vm.errors.any() }
-            },
-            [_vm._v("Submit My Registration")]
+            "div",
+            { staticClass: "col-md-4" },
+            [
+              _c("vue-recaptcha", {
+                directives: [
+                  {
+                    name: "validate",
+                    rawName: "v-validate",
+                    value: "required|min:1",
+                    expression: "'required|min:1'"
+                  }
+                ],
+                ref: "recaptcha",
+                attrs: {
+                  name: "recaptcha",
+                  size: "normal",
+                  sitekey: "6LczHaMUAAAAAFClGpCVOduY6SmOi93QwePThjkE"
+                },
+                on: {
+                  verify: _vm.onCaptchaVerified,
+                  expired: _vm.onCaptchaExpired
+                },
+                model: {
+                  value: _vm.form.recaptcha,
+                  callback: function($$v) {
+                    _vm.$set(_vm.form, "recaptcha", $$v)
+                  },
+                  expression: "form.recaptcha"
+                }
+              }),
+              _vm._v(" "),
+              _vm.errors.has("recaptcha")
+                ? _c("span", [_vm._v(_vm._s(_vm.errors.first("recaptcha")))])
+                : _vm._e()
+            ],
+            1
           )
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "flex form-row form-group mb-5" }, [
+          _c("div", { staticClass: "col-md-3" }, [
+            _c(
+              "button",
+              {
+                staticClass: "btn btn-primary",
+                attrs: { disabled: _vm.pending || _vm.errors.any() }
+              },
+              [_vm._v("Submit My Registration")]
+            )
+          ])
         ])
-      ])
-    ]
-  )
+      ]
+    )
+  ])
 }
 var staticRenderFns = [
   function() {
@@ -34395,7 +34423,7 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("p", { staticClass: "waiver mb-md-0" }, [
           _vm._v(
-            "I hereby apply to enter the 2019 Litchfield Watercade Tennis Tournament and in consideration of my acceptance as a participant,\n                I, the undersigned intending to be legally bound, do hereby, for myself, my heirs, my executors and administrators, forever\n                waive & release any & all rights & claims for damages against the Litchfield Watercade, Inc., the City of Litchfield,\n                District #465 Community Education, Litchfield Tennis Association, Meeker Memorial Hospital, or any agent, employee,\n                official or elected officer of these organizations and any sponsoring or co-sponsoring agencies, for any & all injuries,\n                illness and/ or property loss which I may suffer as a direct or indirect result of my participation in this event."
+            "I hereby apply to enter the 2019 Litchfield Watercade Tennis Tournament and in consideration of my acceptance as a participant,\n                    I, the undersigned intending to be legally bound, do hereby, for myself, my heirs, my executors and administrators, forever\n                    waive & release any & all rights & claims for damages against the Litchfield Watercade, Inc., the City of Litchfield,\n                    District #465 Community Education, Litchfield Tennis Association, Meeker Memorial Hospital, or any agent, employee,\n                    official or elected officer of these organizations and any sponsoring or co-sponsoring agencies, for any & all injuries,\n                    illness and/ or property loss which I may suffer as a direct or indirect result of my participation in this event."
           )
         ])
       ])
@@ -34455,7 +34483,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "container" },
+    { staticClass: "container primary-container" },
     [
       _c("nav-bar", { attrs: { pending: _vm.pending } }),
       _vm._v(" "),
@@ -34508,11 +34536,11 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "container" },
+    { staticClass: "container primary-container" },
     [
       _c("nav-bar"),
       _vm._v(" "),
-      _c("div", { staticClass: "content" }, [
+      _c("div", { staticClass: "content container" }, [
         _c("div", { staticClass: "title" }, [
           _vm._v("\n            " + _vm._s(_vm.title) + "\n        ")
         ]),
