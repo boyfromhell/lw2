@@ -32499,86 +32499,97 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("footer", { staticClass: "footer font-small" }, [
+    _c("div", { staticClass: "container text-center text-md-left" }, [
+      _vm._m(0),
+      _vm._v(" "),
+      _c("hr"),
+      _vm._v(" "),
+      _c("div", { staticClass: "row d-flex align-items-center" }, [
+        _c("div", { staticClass: "col-md-7 col-lg-8" }, [
+          _c(
+            "p",
+            { staticClass: "text-center text-md-left" },
+            [
+              _vm._v("© 2019 Copyright:\n                    "),
+              _c("router-link", { attrs: { to: "/" } }, [
+                _c("strong", [
+                  _vm._v(" Litchfield Watercade Tennis Tournament")
+                ])
+              ])
+            ],
+            1
+          )
+        ]),
+        _vm._v(" "),
+        _vm._m(1)
+      ])
+    ])
+  ])
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("footer", { staticClass: "footer font-small" }, [
-      _c("div", { staticClass: "container text-center text-md-left" }, [
-        _c("div", { staticClass: "row" }, [
-          _c("div", { staticClass: "col-md-12 text-center" }, [
-            _c("b", [
-              _vm._v(
-                "All tournament proceeds benefit the Litchfield Tennis Association"
-              )
-            ])
-          ])
-        ]),
-        _vm._v(" "),
-        _c("hr"),
-        _vm._v(" "),
-        _c("div", { staticClass: "row d-flex align-items-center" }, [
-          _c("div", { staticClass: "col-md-7 col-lg-8" }, [
-            _c("p", { staticClass: "text-center text-md-left" }, [
-              _vm._v("© 2019 Copyright:\n                    "),
-              _c("a", { attrs: { href: "https://watercadetennis.org" } }, [
-                _c("strong", [
-                  _vm._v(" Litchfield Watercade Tennis Tournament")
-                ])
-              ])
-            ])
+    return _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "col-md-12 text-center" }, [
+        _c("b", [
+          _vm._v(
+            "All tournament proceeds benefit the Litchfield Tennis Association"
+          )
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-md-5 col-lg-4 ml-lg-0" }, [
+      _c("div", { staticClass: "text-center text-md-right" }, [
+        _c("ul", { staticClass: "list-unstyled list-inline" }, [
+          _c("li", { staticClass: "list-inline-item" }, [
+            _c(
+              "a",
+              {
+                staticClass: "btn-floating btn-lg rgba-white-slight mx-1",
+                attrs: {
+                  target: "_blank",
+                  href: "mailto:watercadetennis@gmail.com"
+                }
+              },
+              [_c("i", { staticClass: "fas fa-envelope" })]
+            )
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "col-md-5 col-lg-4 ml-lg-0" }, [
-            _c("div", { staticClass: "text-center text-md-right" }, [
-              _c("ul", { staticClass: "list-unstyled list-inline" }, [
-                _c("li", { staticClass: "list-inline-item" }, [
-                  _c(
-                    "a",
-                    {
-                      staticClass: "btn-floating btn-lg rgba-white-slight mx-1",
-                      attrs: {
-                        target: "_blank",
-                        href: "mailto:watercadetennis@gmail.com"
-                      }
-                    },
-                    [_c("i", { staticClass: "fas fa-envelope" })]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("li", { staticClass: "list-inline-item" }, [
-                  _c(
-                    "a",
-                    {
-                      staticClass: "btn-floating btn-lg rgba-white-slight mx-1",
-                      attrs: {
-                        target: "_blank",
-                        href:
-                          "https://www.facebook.com/Watercade-Tennis-894446647279405/"
-                      }
-                    },
-                    [_c("i", { staticClass: "fab fa-facebook-f" })]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("li", { staticClass: "list-inline-item" }, [
-                  _c(
-                    "a",
-                    {
-                      staticClass: "btn-floating btn-lg rgba-white-slight mx-1",
-                      attrs: {
-                        target: "_blank",
-                        href: "https://twitter.com/watercadetennis"
-                      }
-                    },
-                    [_c("i", { staticClass: "fab fa-twitter" })]
-                  )
-                ])
-              ])
-            ])
+          _c("li", { staticClass: "list-inline-item" }, [
+            _c(
+              "a",
+              {
+                staticClass: "btn-floating btn-lg rgba-white-slight mx-1",
+                attrs: {
+                  target: "_blank",
+                  href:
+                    "https://www.facebook.com/Watercade-Tennis-894446647279405/"
+                }
+              },
+              [_c("i", { staticClass: "fab fa-facebook-f" })]
+            )
+          ]),
+          _vm._v(" "),
+          _c("li", { staticClass: "list-inline-item" }, [
+            _c(
+              "a",
+              {
+                staticClass: "btn-floating btn-lg rgba-white-slight mx-1",
+                attrs: {
+                  target: "_blank",
+                  href: "https://twitter.com/watercadetennis"
+                }
+              },
+              [_c("i", { staticClass: "fab fa-twitter" })]
+            )
           ])
         ])
       ])
@@ -32955,9 +32966,7 @@ var render = function() {
           _vm._v("\n            " + _vm._s(_vm.eventDate) + "\n        ")
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "sponsored_by m-b-md" }, [
-          _vm._v("\n            " + _vm._s(_vm.sponsoredBy) + "\n        ")
-        ]),
+        _c("div", { staticClass: "sponsored_by m-b-md" }),
         _vm._v(" "),
         _vm._m(0),
         _vm._v(" "),

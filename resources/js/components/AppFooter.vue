@@ -10,9 +10,9 @@
             <div class="row d-flex align-items-center">
                 <div class="col-md-7 col-lg-8">
                     <p class="text-center text-md-left">© 2019 Copyright:
-                        <a href="https://watercadetennis.org">
+                        <router-link to="/">
                             <strong> Litchfield Watercade Tennis Tournament</strong>
-                        </a>
+                        </router-link>
                     </p>
                 </div>
                 <div class="col-md-5 col-lg-4 ml-lg-0">

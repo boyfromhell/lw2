@@ -37,6 +37,7 @@ class RegistrationConfirmation extends Mailable
      */
     public function build()
     {
+        $fees = '$' . number_format($this->participant->tournament_fees, 2);
         return $this->markdown('email.registration-confirmation')
             ->from(env('MAIL_FROM_ADDRESS'))
             ->subject('Watercade Tennis Tournament Registration Confirmation')
@@ -48,7 +49,7 @@ class RegistrationConfirmation extends Mailable
                 'event2' => Participant::$events[$this->participant->event2],
                 'event2_partner' => $this->participant->event2_partner,
                 'shirt_size' => Participant::$tShirtSizes[$this->participant->shirt_size],
-                'tournament_fees' => $this->participant->tournament_fees,
+                'tournament_fees' => $fees,
             ])
         ;
     }

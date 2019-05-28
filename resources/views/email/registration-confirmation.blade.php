@@ -1,10 +1,12 @@
 @component('mail::message')
 Thank you {{ $first_name }} {{ $last_name }}!
 
-We have received your registration for the 41st Annual Litchfield Watercade Tennis Tournament July 12-14, 2019!
+We have received your registration for the 41st Annual Litchfield<br>
+Watercade Tennis Tournament July 12-14, 2019!
 
-Your spot in the tournament is reserved, but is not confirmed until payment is received. If paying by check,
-please print and include this confirmation with your payment.
+Your spot in the tournament is reserved, but is not confirmed until payment is received.<br>
+Payment can be made either by check or electronically via Zelle.<br>
+If paying by check, please print and include this confirmation with your payment.
 
 @component('mail::panel')
 # Your events entered:
@@ -27,6 +29,13 @@ please print and include this confirmation with your payment.
 **Evonne Fix - Watercade Tennis Tournament**<br>
 **1600 Legacy Parkway E, Unit 4**<br>
 **Maplewood, MN 55109**
+@endcomponent
+
+@component('mail::panel')
+#Zelle Payment Information:
+**Name: Evonne Fix**<br>
+**Phone: 651-235-4846**<br>
+**Memo: {{ $first_name }} {{ $last_name }}**
 @endcomponent
 
 We look forward to seeing you in July!
