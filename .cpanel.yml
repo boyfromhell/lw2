@@ -2,4 +2,9 @@
 deployment:
     tasks:
         - export DEPLOYPATH=/home/admin2015tennis/public_html
-        - /bin/cp -R public $DEPLOYPATH
+        - /bin/cp -R public/assets $DEPLOYPATH
+        - /bin/cp -R public/css $DEPLOYPATH
+        - /bin/cp -R public/js $DEPLOYPATH
+        - /bin/cp -R public/vendor $DEPLOYPATH
+        - /bin/cp favicon.ico $DEPLOYPATH
+        - /bin/cp index.php $DEPLOYPATH
