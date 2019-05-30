@@ -2,16 +2,16 @@
 deployment:
     tasks:
         - export DEPLOYPATH=/home/admin2015tennis/public_html
-        - /bin/cp -R public/app $DEPLOYPATH
-        - /bin/cp -R public/bootstrap $DEPLOYPATH
-        - /bin/cp -R public/config $DEPLOYPATH
-        - /bin/cp -R public/database $DEPLOYPATH
-        - /bin/cp -R public/nova $DEPLOYPATH
-        - /bin/cp -R public/public $DEPLOYPATH
-        - /bin/cp -R public/resources $DEPLOYPATH
-        - /bin/cp -R public/routes $DEPLOYPATH
-        - /bin/cp -R public/storage $DEPLOYPATH
-        - /bin/cp -R public/tests $DEPLOYPATH
+        - /bin/cp -R app $DEPLOYPATH
+        - /bin/cp -R bootstrap $DEPLOYPATH
+        - /bin/cp -R config $DEPLOYPATH
+        - /bin/cp -R database $DEPLOYPATH
+        - /bin/cp -R nova $DEPLOYPATH
+        - /bin/cp -R public $DEPLOYPATH
+        - /bin/cp -R resources $DEPLOYPATH
+        - /bin/cp -R routes $DEPLOYPATH
+        - /bin/cp -R storage $DEPLOYPATH
+        - /bin/cp -R tests $DEPLOYPATH
         - /bin/cp artisan $DEPLOYPATH
         - /bin/cp composer.json $DEPLOYPATH
         - /bin/cp package.json $DEPLOYPATH
