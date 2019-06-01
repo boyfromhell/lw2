@@ -46,7 +46,7 @@ class RegistrationConfirmation extends Mailable
                 'last_name' => $this->participant->last_name,
                 'event1' => Participant::$events[$this->participant->event1],
                 'event1_partner' => $this->participant->event1_partner,
-                'event2' => Participant::$events[$this->participant->event2],
+                'event2' => isset($this->participant->event2) ? Participant::$events[$this->participant->event2] : "",
                 'event2_partner' => $this->participant->event2_partner,
                 'shirt_size' => Participant::$tShirtSizes[$this->participant->shirt_size],
                 'tournament_fees' => $fees,
