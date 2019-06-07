@@ -109,11 +109,14 @@ class Participant extends Resource
                 ->hideFromIndex()
                 ->rules('required', 'max:10'),
 
-            Number::make('Tournament Fees', 'tournament_fees')
+            Number::make('Fees', 'tournament_fees')
                 ->rules('required', 'min:20', 'max:40'),
 
             Boolean::make('Fees Paid', 'fees_paid')
                 ->rules('required'),
+
+            Text::make('Shirt Size', 'shirt_size')
+                ->rules('required', 'max:15'),
 
             Heading::make('<h4>Event Information</h4>')
                 ->asHtml()
@@ -160,7 +163,11 @@ class Participant extends Resource
      */
     public function filters(Request $request)
     {
-        return [];
+        return [
+            new Filters\ParticipantEvent,
+            new Filters\ParticipantFeesPaid,
+            new Filters\TShirtSize,
+        ];
     }
 
     /**
@@ -182,6 +189,10 @@ class Participant extends Resource
      */
     public function actions(Request $request)
     {
-        return [];
+        return [
+            new Actions\ExportParticipantsToExcel,
+            new Actions\MarkParticipantPaid,
+            new Actions\MarkParticipantUnpaid,
+        ];
     }
 }

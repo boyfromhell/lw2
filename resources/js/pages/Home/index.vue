@@ -9,7 +9,7 @@
                 {{ eventDate }}
             </div>
             <div class="sponsored_by m-b-md">
-                
+                {{ sponsoredBy }}
             </div>
             <div class="row">
                 <div class="offset-md-2 col-md-8">
@@ -51,7 +51,7 @@
             return {
                 title: 'Litchfield Watercade Tennis Tournament',
                 eventDate: 'July 12-14, 2019',
-                sponsoredBy: 'Sponsored By: Meeker Memorial Hospital & Clinics',
+                sponsoredBy: 'Sponsored By: Sibley Dental',
             }
         },
     }
