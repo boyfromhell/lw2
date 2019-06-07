@@ -3,9 +3,11 @@
 namespace App\Nova;
 
 use App\Address;
+use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\Heading;
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
+use Laravel\Nova\Fields\Number;
 use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Http\Requests\NovaRequest;
@@ -60,6 +62,10 @@ class Participant extends Resource
                 ->asHtml()
                 ->hideFromDetail(),
 
+            Number::make('Event Year', 'event_year')
+                ->exceptOnForms()
+                ->rules('required'),
+
             Text::make('First Name', 'first_name')
                 ->sortable()
                 ->rules('required', 'max:50'),
@@ -87,28 +93,51 @@ class Participant extends Resource
                 ->rules('max:50'),
 
             Text::make('City')
-                ->hideFromIndex()
                 ->sortable()
                 ->rules('required', 'max:50'),
 
             Text::make('State/Province', 'state')
-                ->hideFromIndex()
                 ->sortable()
                 ->rules('required', 'max:2')
-                ->exceptOnForms(),
+                ->onlyOnForms(),
 
             Select::make('State/Province', 'state')
+                ->onlyOnDetail()
                 ->rules('required'),
 
             Text::make('Zip/Postal Code', 'zip')
                 ->hideFromIndex()
                 ->rules('required', 'max:10'),
 
+            Number::make('Tournament Fees', 'tournament_fees')
+                ->rules('required', 'min:20', 'max:40'),
+
+            Boolean::make('Fees Paid', 'fees_paid')
+                ->rules('required'),
+
             Heading::make('<h4>Event Information</h4>')
                 ->asHtml()
                 ->hideFromDetail(),
 
+            Text::make('Event 1', 'event1')
+                ->sortable()
+                ->hideFromIndex()
+                ->rules('required', 'max:3'),
 
+            Text::make('Event 1 Partner', 'event1_partner')
+                ->sortable()
+                ->hideFromIndex()
+                ->rules('max:50'),
+
+            Text::make('Event 2', 'event2')
+                ->sortable()
+                ->hideFromIndex()
+                ->rules('max:3'),
+
+            Text::make('Event 2 Partner', 'event2_partner')
+                ->sortable()
+                ->hideFromIndex()
+                ->rules('max:50'),
         ];
     }
 
