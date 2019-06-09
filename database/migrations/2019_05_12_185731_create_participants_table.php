@@ -15,7 +15,7 @@ class CreateParticipantsTable extends Migration
     {
         Schema::create('participants', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('event_year');
+            $table->integer('event_year')->default(2019);
             $table->string('first_name');
             $table->string('last_name');
             $table->string('email');
@@ -30,7 +30,7 @@ class CreateParticipantsTable extends Migration
             $table->string('event1_partner')->nullable();
             $table->string('event2')->nullable();
             $table->string('event2_partner')->nullable();
-            $table->string('signed_name');
+            $table->string('signed_name')->nullable();
             $table->integer('tournament_fees');
             $table->boolean('fees_paid');
             $table->timestamps();

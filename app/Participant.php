@@ -18,7 +18,7 @@ class Participant extends Model
     public static $tShirtSizes = [
         self::SHIRT_SMALL => 'Small',
         self::SHIRT_MEDIUM => 'Medium',
-        self::SHIRT_MEDIUM => 'Large',
+        self::SHIRT_LARGE => 'Large',
         self::SHIRT_EXTRA_LARGE => 'Extra Large',
         self::SHIRT_2XL => '2XL',
     ];

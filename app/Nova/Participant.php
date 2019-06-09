@@ -3,6 +3,7 @@
 namespace App\Nova;
 
 use App\Address;
+use App\Participant as ParticipantModel;
 use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\Heading;
 use Laravel\Nova\Fields\ID;
@@ -96,35 +97,61 @@ class Participant extends Resource
                 ->sortable()
                 ->rules('required', 'max:50'),
 
-            Text::make('State/Province', 'state')
+            Text::make('State/Province', 'state', function() {
+                return Address::$usStates[$this->state];
+                })
                 ->sortable()
-                ->rules('required', 'max:2')
-                ->onlyOnForms(),
+                ->onlyOnDetail(),
 
             Select::make('State/Province', 'state')
-                ->onlyOnDetail()
-                ->rules('required'),
+                ->onlyOnForms()
+                ->displayUsing(function ($state) {
+                    return Address::$usStates[$state];
+                })
+                ->options(Address::$usStates)
+                ->rules('required', 'max:2'),
 
             Text::make('Zip/Postal Code', 'zip')
                 ->hideFromIndex()
                 ->rules('required', 'max:10'),
 
             Number::make('Fees', 'tournament_fees')
-                ->rules('required', 'min:20', 'max:40'),
+                ->rules('required'),
 
             Boolean::make('Fees Paid', 'fees_paid')
                 ->rules('required'),
 
-            Text::make('Shirt Size', 'shirt_size')
+            Text::make('Shirt Size', 'shirt_size', function() {
+                return ParticipantModel::$tShirtSizes[$this->shirt_size];
+                })
+                ->exceptOnForms()
+                ->rules('required', 'max:15'),
+
+            Select::make('T Shirt Size', 'shirt_size')
+                ->onlyOnForms()
+                ->displayUsing(function($size) {
+                    return ParticipantModel::$tShirtSizes[$size];
+                })
+                ->options(ParticipantModel::$tShirtSizes)
                 ->rules('required', 'max:15'),
 
             Heading::make('<h4>Event Information</h4>')
                 ->asHtml()
                 ->hideFromDetail(),
 
-            Text::make('Event 1', 'event1')
+            Text::make('Event 1', 'event1', function() {
+                return ParticipantModel::$events[$this->event1];
+                })
                 ->sortable()
-                ->hideFromIndex()
+                ->onlyOnDetail()
+                ->rules('required', 'max:3'),
+
+            Select::make('Event 1', 'event1')
+                ->onlyOnForms()
+                ->displayUsing(function($event) {
+                    return ParticipantModel::$events[$event];
+                })
+                ->options(ParticipantModel::$events)
                 ->rules('required', 'max:3'),
 
             Text::make('Event 1 Partner', 'event1_partner')
@@ -132,9 +159,19 @@ class Participant extends Resource
                 ->hideFromIndex()
                 ->rules('max:50'),
 
-            Text::make('Event 2', 'event2')
+            Text::make('Event 2', 'event2', function() {
+                return isset($this->event2) ? ParticipantModel::$events[$this->event2] : null;
+            })
                 ->sortable()
-                ->hideFromIndex()
+                ->onlyOnDetail()
+                ->rules('max:3'),
+
+            Select::make('Event 2', 'event2')
+                ->onlyOnForms()
+                ->displayUsing(function($event) {
+                    return ParticipantModel::$events[$event];
+                })
+                ->options(ParticipantModel::$events)
                 ->rules('max:3'),
 
             Text::make('Event 2 Partner', 'event2_partner')

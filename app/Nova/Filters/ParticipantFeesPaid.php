@@ -24,7 +24,7 @@ class ParticipantFeesPaid extends Filter
      */
     public function apply(Request $request, $query, $value)
     {
-        return $query;
+        return $query->where('fees_paid', $value, 1);
     }
 
     /**
@@ -35,6 +35,9 @@ class ParticipantFeesPaid extends Filter
      */
     public function options(Request $request)
     {
-        return [];
+        return [
+            'Paid' => '=',
+            'Unpaid' => '!='
+        ];
     }
 }
